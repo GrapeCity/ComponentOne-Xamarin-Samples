@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c1="http://schemas.grapecity.com/xf/2019/xaml"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             x:Class="FlexChart101.SelectionModesSample">
+  <StackLayout>
+        <Grid Margin="10" HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblChartType" Text="Chart Type" Grid.Row="0" Grid.Column="0" />
+        <Label x:Name="lblSelectionMode" Text="Selection Mode" Grid.Row="0" Grid.Column="1" />
+        <Picker x:Name="pickerChartType" Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand" SelectedIndexChanged = "pickerChartType_SelectedIndexChanged" />
+        <Picker x:Name="pickerSelectionMode" Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" SelectedIndexChanged="pickerSelectionMode_SelectedIndexChanged" />
+    </Grid>
+
+    <Grid  VerticalOptions="FillAndExpand">
+            <c1:FlexChart x:Name="flexChart" Header="2017 Performance" BindingX="Name" LegendPosition="Bottom" VerticalOptions="FillAndExpand">
+                <c1:FlexChart.HeaderStyle>
+                    <c1:ChartStyle FontSize="18"/>
+                </c1:FlexChart.HeaderStyle>
+                <c1:FlexChart.Series>
+                <c1:ChartSeries Binding="Sales" SeriesName="Sales" />
+                <c1:ChartSeries Binding="Expenses"  SeriesName="Expenses" />
+                <c1:ChartSeries Binding="Downloads"  SeriesName="Downloads" />
+            </c1:FlexChart.Series>
+            <c1:FlexChart.SelectionStyle>
+                <c1:ChartStyle Stroke="Red" StrokeThickness="3" />
+            </c1:FlexChart.SelectionStyle>
+        </c1:FlexChart>
+    </Grid>
+  </StackLayout>
+</ContentPage>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlexGrid101.StarSizing"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             xmlns:c1="http://schemas.grapecity.com/xf/2019/xaml">
+    <c1:FlexGrid x:Name="grid" 
+                 DefaultColumnWidth="*"
+                 AutoGenerateColumns="False" 
+                 AllowResizing="None" 
+                 HeadersVisibility="Column" 
+                 BackgroundColor="White"
+                 RowBackgroundColor="#FFE5E6FA"
+                 RowTextColor="Black"
+                 AlternatingRowBackgroundColor="White" 
+                 GridLinesVisibility="None"
+                 ColumnHeaderGridLinesVisibility="None"
+                 ColumnHeaderBackgroundColor="#FF778898" 
+                 ColumnHeaderTextColor="White" 
+                 ColumnHeaderFontAttributes="Bold"
+                 SelectionBackgroundColor="#FFFAD127" 
+                 SelectionTextColor="Black">
+        <c1:FlexGrid.Columns>
+            <c1:GridColumn Binding="FirstName"/>
+            <c1:GridColumn Binding="LastName"/>
+            <c1:GridColumn Binding="LastOrderDate" Format="d"/>
+            <c1:GridColumn Binding="OrderTotal" Format="N" HorizontalAlignment="End"/>
+        </c1:FlexGrid.Columns>
+    </c1:FlexGrid>
+</ContentPage>

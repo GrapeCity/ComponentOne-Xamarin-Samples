@@ -1,0 +1,13 @@
+﻿"GettingStarted" = "Getting Started";
+"LinearGauge" = "Linear Gauge";
+"RadialGauge" = "Radial Gauge";
+"BulletGraph" = "Bullet Graph";
+"MinMax" = "Min and Max";
+"DisplayValue" = "Displaying Values";
+"UsingRanges" = "Using Ranges";
+"StartAngle" = "Start Angle";
+"SweepAngle" = "Sweep Angle";
+"AutoScale" = "Automatic Scaling";
+"ImageSavedDescription" = "The image has been saved to your device's picture album.";
+"ImageSavedTitle" = "Image Saved";
+"PermissionDenied" = "The permission is denied by user.";

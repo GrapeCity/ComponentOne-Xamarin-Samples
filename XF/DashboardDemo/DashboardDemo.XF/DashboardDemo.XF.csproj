@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <RootNamespace>DashboardDemo</RootNamespace>
+    <NeutralLanguage>en</NeutralLanguage>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE;XF</DefineConstants>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;XF</DefineConstants>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\AcmeLogo.png" />
+    <EmbeddedResource Include="Images\Analysis.png" />
+    <EmbeddedResource Include="Images\Close.png" />
+    <EmbeddedResource Include="Images\Dashboard.png" />
+    <EmbeddedResource Include="Images\HamburgerMenu.png" />
+    <EmbeddedResource Include="Images\Products.png" />
+    <EmbeddedResource Include="Images\Reportings.png" />
+    <EmbeddedResource Include="Images\Tasks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.Xamarin.Forms.Chart">
+      <Version>4.8.20203.485</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xamarin.Forms.Core">
+      <Version>4.8.20203.485</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xamarin.Forms.Gauge">
+      <Version>4.8.20203.485</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xamarin.Forms.Grid">
+      <Version>4.8.20203.485</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\AppResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="..\Model\Model.projitems" Label="Shared" />
+</Project>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlexGrid101.CellFreezing"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             xmlns:c1="http://schemas.grapecity.com/xf/2019/xaml">
+    <c1:FlexGrid x:Name="grid" AutoGenerateColumns="False" FrozenColumns="1" FrozenRows="1" AllowMerging="Cells">
+        <c1:FlexGrid.Columns>
+            <c1:GridColumn Binding="Name" />
+            <c1:GridColumn Binding="Address" />
+            <c1:GridColumn Binding="City" />
+            <c1:GridColumn Binding="Country" AllowMerging="true" />
+            <c1:GridColumn Binding="PostalCode" />
+            <c1:GridColumn Binding="Email" />
+            <c1:GridColumn Binding="LastOrderDate" />
+        </c1:FlexGrid.Columns>
+    </c1:FlexGrid>
+</ContentPage>

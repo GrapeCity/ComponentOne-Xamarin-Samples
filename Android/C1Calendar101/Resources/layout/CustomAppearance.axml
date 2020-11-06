@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+    <c1.android.calendar.C1Calendar
+        android:id="@+id/Calendar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:c1_backgroundColor="#FFEBEBEB"
+        app:c1_textColor="#FF000000"
+        app:c1_typeface="monospace"
+        app:c1_textSize="16px"
+        app:c1_adjacentDayTextColor="#FFA5A5A3"
+        app:c1_dayBorderColor="#FFF2F2F2"
+        app:c1_dayBorderWidth="1"
+        app:c1_borderColor="#FF343434"
+        borderWidth="4"
+        app:c1_dayOfWeekBackgroundColor="#FF63A646"
+        app:c1_dayOfWeekTextColor="#FFFFFFFF"
+        app:c1_dayOfWeekFormat="d"
+        app:c1_dayOfWeekTextStyle="italic"
+        app:c1_dayOfWeekTypeface="sans"
+        app:c1_dayOfWeekTextSize="21px"
+        app:c1_headerBackgroundColor="#FF3D834B"
+        app:c1_headerTextColor="#FFFFFFFF"
+        app:c1_headerTypeface="serif"
+        app:c1_selectionBackgroundColor="#FFD2D2D2"
+        app:c1_selectionTextColor="#FF000000"
+        app:c1_todayTextStyle="bold|italic" />
+</android.support.constraint.ConstraintLayout>

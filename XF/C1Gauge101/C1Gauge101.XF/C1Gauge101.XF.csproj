@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>C1Gauge101</RootNamespace>
+    <NeutralLanguage>en</NeutralLanguage>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE;XF</DefineConstants>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;XF</DefineConstants>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="C1Gauge101.Xamarin.csproj.vspscc" />
+    <None Remove="GCDTLicenses.xml" />
+    <None Remove="Images\gauge_basic.png" />
+    <None Remove="Images\gauge_bullet.png" />
+    <None Remove="Images\gauge_linear.png" />
+    <None Remove="Images\gauge_radial.png" />
+    <None Remove="Images\gauge_ranges.png" />
+    <None Remove="Images\gauge_scaling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\gauge_basic.png" />
+    <EmbeddedResource Include="Images\gauge_bullet.png" />
+    <EmbeddedResource Include="Images\gauge_linear.png" />
+    <EmbeddedResource Include="Images\gauge_radial.png" />
+    <EmbeddedResource Include="Images\gauge_ranges.png" />
+    <EmbeddedResource Include="Images\gauge_scaling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.Xamarin.Forms.Core">
+      <Version>4.8.20203.485</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xamarin.Forms.Gauge">
+      <Version>4.8.20203.485</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\AppResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

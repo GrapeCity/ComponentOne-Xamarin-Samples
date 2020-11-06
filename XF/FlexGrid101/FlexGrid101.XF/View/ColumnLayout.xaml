@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlexGrid101.ColumnLayout"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             xmlns:c1="http://schemas.grapecity.com/xf/2019/xaml">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="btnEditColumnLayout" Clicked="OnEditColumnLayout" Order="Primary" Priority="0">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" WinPhone="Assets/AppBar/appbar.edit.png" Android="ic_edit.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem x:Name="btnSerializeColumnLayout" Clicked="OnSerializeColumnLayout" Order="Primary" Priority="0">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" WinPhone="Assets/AppBar/save.png" Android="ic_action_save.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <c1:FlexGrid x:Name="grid"/>
+</ContentPage>

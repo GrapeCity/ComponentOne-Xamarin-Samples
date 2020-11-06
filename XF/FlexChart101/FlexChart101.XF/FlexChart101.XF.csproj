@@ -1,0 +1,99 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>FlexChart101</RootNamespace>
+    <NeutralLanguage>en</NeutralLanguage>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.Xamarin.Forms.Chart">
+      <Version>4.8.20203.485</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xamarin.Forms.Core">
+      <Version>4.8.20203.485</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\apple.png" />
+    <EmbeddedResource Include="Images\butterfly.png" />
+    <EmbeddedResource Include="Images\chart_aggregate.png" />
+    <EmbeddedResource Include="Images\chart_animation.png" />
+    <EmbeddedResource Include="Images\chart_annotation.png" />
+    <EmbeddedResource Include="Images\chart_area.png" />
+    <EmbeddedResource Include="Images\chart_axes.png" />
+    <EmbeddedResource Include="Images\chart_bubble.png" />
+    <EmbeddedResource Include="Images\chart_column.png" />
+    <EmbeddedResource Include="Images\chart_composite.png" />
+    <EmbeddedResource Include="Images\chart_dynamic.png" />
+    <EmbeddedResource Include="Images\chart_finance.png" />
+    <EmbeddedResource Include="Images\chart_format.png" />
+    <EmbeddedResource Include="Images\chart_line.png" />
+    <EmbeddedResource Include="Images\chart_linemarker.png" />
+    <EmbeddedResource Include="Images\chart_multiaxes.png" />
+    <EmbeddedResource Include="Images\chart_scatter.png" />
+    <EmbeddedResource Include="Images\chart_scrolling.png" />
+    <EmbeddedResource Include="Images\chart_selection.png" />
+    <EmbeddedResource Include="Images\chart_title.png" />
+    <EmbeddedResource Include="Images\chart_tooltip.png" />
+    <EmbeddedResource Include="Images\chart_treeMap.png" />
+    <EmbeddedResource Include="Images\custom.png" />
+    <EmbeddedResource Include="Images\export_image.png" />
+    <EmbeddedResource Include="Images\Germany.png" />
+    <EmbeddedResource Include="Images\google.png" />
+    <EmbeddedResource Include="Images\Greece.png" />
+    <EmbeddedResource Include="Images\Italy.png" />
+    <EmbeddedResource Include="Images\Japan.png" />
+    <EmbeddedResource Include="Images\microsoft.png" />
+    <EmbeddedResource Include="Images\pie.png" />
+    <EmbeddedResource Include="Images\pie_doughnut.png" />
+    <EmbeddedResource Include="Images\pie_labels.png" />
+    <EmbeddedResource Include="Images\pie_load.png" />
+    <EmbeddedResource Include="Images\pie_selection.png" />
+    <EmbeddedResource Include="Images\pie_title.png" />
+    <EmbeddedResource Include="Images\themes.png" />
+    <EmbeddedResource Include="Images\UK.png" />
+    <EmbeddedResource Include="Images\US.png" />
+    <EmbeddedResource Include="Images\xuni_butterfly.png" />
+    <EmbeddedResource Include="Images\histogram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\AppResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Samples\TreeMap.xaml.cs">
+      <DependentUpon>TreeMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Samples\CustomPlotElementsScrolling.xaml.cs">
+      <DependentUpon>CustomPlotElementsScrolling.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Samples\UpdateAnimationSample.xaml.cs">
+      <DependentUpon>UpdateAnimationSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Samples\LoadAnimationSample.xaml.cs">
+      <DependentUpon>LoadAnimationSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Samples\PieAnimationSample.xaml.cs">
+      <DependentUpon>PieAnimationSample.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Images\chart_treeMap.png" />
+    <None Remove="Images\histogram.png" />
+  </ItemGroup>
+</Project>

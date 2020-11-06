@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c1="http://schemas.grapecity.com/xf/2019/xaml"     
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             x:Class="MyBI.BIPage" >
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem x:Name="Info" Order="Primary" Clicked="Info_Clicked" Icon="info.png"></ToolbarItem>
+    </TabbedPage.ToolbarItems>
+    <TabbedPage.Children>
+        <ContentPage Icon="current.png" x:Name="CurrentPage">
+            <StackLayout x:Name="GaugeStack" Orientation="Vertical" Margin="5">
+                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <Label x:Name="UnitSalesLabel" HorizontalOptions="Center" FontSize="Large"/>
+                    <c1:C1RadialGauge x:Name="UnitSalesGauge" ShowRanges="True" VerticalOptions="FillAndExpand" ValueFontSize="24" IsReadOnly="True" Margin="5" Thickness="0.5" >
+                        <c1:C1RadialGauge.Pointer>
+                            <c1:GaugeRange Thickness="0.7" Color="#AA49A7D5"/>
+                        </c1:C1RadialGauge.Pointer>
+                        <c1:C1RadialGauge.Ranges>
+                            <c1:GaugeRange x:Name="UnitSalesGoal" Color="Gold"/>
+                        </c1:C1RadialGauge.Ranges>
+                    </c1:C1RadialGauge>
+                </StackLayout>
+                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <Label x:Name="RevenueLabel" HorizontalOptions="Center" FontSize="Large"/>
+                    <c1:C1RadialGauge x:Name="RevenueGauge" ShowRanges="True" VerticalOptions="FillAndExpand" ValueFontSize="24" IsReadOnly="True" Format="C0" Margin="5" Thickness="0.5" >
+                        <c1:C1RadialGauge.Pointer>
+                            <c1:GaugeRange Thickness="0.7" Color="#AA73B049"/>
+                        </c1:C1RadialGauge.Pointer>
+                        <c1:C1RadialGauge.Ranges>
+                            <c1:GaugeRange x:Name="RevenueGoal" Color="Gold"/>
+                        </c1:C1RadialGauge.Ranges>
+                    </c1:C1RadialGauge>
+                </StackLayout>
+            </StackLayout>
+        </ContentPage>
+        <ContentPage Icon="trends.png" x:Name="TrendPage">
+            <Grid Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label x:Name="TrendUnitSalesLabel" FontSize="Large"/>
+                    <Label x:Name="UnitTrendSymbol" VerticalOptions="Center" FontSize="Large"/>
+                </StackLayout>
+                <c1:FlexChart x:Name="UnitSalesChart" Palette="Custom" ChartType="Scatter" Margin="5" Grid.Row="1">
+                    <c1:FlexChart.AxisX>
+                        <c1:ChartAxis Format="MMMM, yyyy"/>
+                    </c1:FlexChart.AxisX>
+                    <c1:FlexChart.AxisY>
+                        <c1:ChartAxis x:Name="UnitSalesY" MajorTickMarks="None" AxisLine="False" MajorGrid="True">
+                            <c1:ChartAxis.MajorGridStyle>
+                                <c1:ChartStyle Stroke="LightGray"/>
+                            </c1:ChartAxis.MajorGridStyle>
+                        </c1:ChartAxis>
+                    </c1:FlexChart.AxisY>
+                    <c1:FlexChart.Series>
+                        <c1:ChartSeries Binding="SumUnits" BindingX="Month">
+                            <c1:ChartSeries.Style>
+                                <c1:ChartStyle Fill="#AA49A7D5" Stroke="#49A7D5"/>
+                            </c1:ChartSeries.Style>
+                        </c1:ChartSeries>
+                        <c1:ChartSeries Binding="TrendUnitValue" BindingX="Month" ChartType="Line">
+                            <c1:ChartSeries.Style>
+                                <c1:ChartStyle Fill="Blue" StrokeThickness="3" Stroke="Blue"/>
+                            </c1:ChartSeries.Style>
+                        </c1:ChartSeries>
+                    </c1:FlexChart.Series>
+                </c1:FlexChart>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="2">
+                    <Label x:Name="TrendRevenueLabel" Grid.Row="2" FontSize="Large"/>
+                    <Label x:Name="RevenueTrendSymbol" VerticalOptions="Center" FontSize="Large" />
+                </StackLayout>
+                <c1:FlexChart x:Name="RevenueChart" Palette="Custom" ChartType="Scatter" Margin="5" Grid.Row="3">
+                    <c1:FlexChart.AxisX>
+                        <c1:ChartAxis Format="MMMM, yyyy" />
+                    </c1:FlexChart.AxisX>
+                    <c1:FlexChart.AxisY>
+                        <c1:ChartAxis x:Name="RevenueY" MajorGrid="True" MajorTickMarks="None" AxisLine="False" LabelLoading="RevenueChartAxisYLabelLoading">
+                            <c1:ChartAxis.MajorGridStyle>
+                                <c1:ChartStyle Stroke="LightGray"/>
+                            </c1:ChartAxis.MajorGridStyle>
+                        </c1:ChartAxis>
+                    </c1:FlexChart.AxisY>
+                    <c1:FlexChart.Series>
+                        <c1:ChartSeries Binding="SumRevenue" BindingX="Month" >
+                            <c1:ChartSeries.Style>
+                                <c1:ChartStyle Fill="#AA73B049" Stroke="#73B049"/>
+                            </c1:ChartSeries.Style>
+                        </c1:ChartSeries>
+                        <c1:ChartSeries Binding="TrendRevenueValue" BindingX="Month" ChartType="Line">
+                            <c1:ChartSeries.Style>
+                                <c1:ChartStyle Fill="Green" StrokeThickness="3" Stroke="Green"/>
+                            </c1:ChartSeries.Style>
+                        </c1:ChartSeries>
+                    </c1:FlexChart.Series>
+                </c1:FlexChart>
+            </Grid>
+        </ContentPage>
+        <ContentPage Icon="details.png" x:Name="DetailsPage">
+            <Grid Margin="5">
+                <c1:FlexGrid x:Name="detailsView" AllowDragging="None" AllowResizing="None" ColumnHeaderFontSize="12" IsReadOnly="True" Margin="5" DefaultRowHeight="50" AutoGenerateColumns="False" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <c1:FlexGrid.Columns>
+                        <c1:GridColumn x:Name="periodColumn" Width="Auto" Binding="Month" Format="MMMM, yyyy"/>
+                        <c1:GridColumn x:Name="unitColumn" Width="*" >
+                            <c1:GridColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Grid CompressedLayout.IsHeadless="true">
+                                        <c1:C1LinearGauge IsAnimated="False" Value="{Binding SumUnits}" Max="{Binding MaxUnits}" IsReadOnly="True" PointerColor="#AA49A7D5" />
+                                        <Label Text="{Binding SumUnits}" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </c1:GridColumn.CellTemplate>
+                        </c1:GridColumn>
+                        <c1:GridColumn x:Name="revenueColumn" Width="*" Format="n0">
+                            <c1:GridColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Grid CompressedLayout.IsHeadless="true">
+                                        <c1:C1LinearGauge IsAnimated="False" Value="{Binding SumRevenue}" Max="{Binding MaxRevenue}" IsReadOnly="True" PointerColor="#AA73B049" />
+                                        <Label Text="{Binding SumRevenue}" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </c1:GridColumn.CellTemplate>
+                        </c1:GridColumn>
+                    </c1:FlexGrid.Columns>
+                </c1:FlexGrid>
+            </Grid>
+        </ContentPage>
+    </TabbedPage.Children>
+</TabbedPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlexGrid101.OnDemand"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             xmlns:c1="http://schemas.grapecity.com/xf/2019/xaml"
+             xmlns:local="clr-namespace:FlexGrid101;assembly=FlexGrid101.XF">
+    <StackLayout>
+        <Entry x:Name="search" Completed="OnCompleted" Margin="5,5,5,5"/>
+        <Grid VerticalOptions="FillAndExpand">
+            <c1:FlexGrid x:Name="grid" AutoGenerateColumns="False" HeadersVisibility="Column" IsReadOnly="True" CellDoubleTapped="OnCellDoubleTapped" AllowMerging="ColumnHeaders" AllowDragging="None" AllowResizing="None">
+                <c1:FlexGrid.Columns>
+                    <local:GridImageColumn Binding="Thumbnail" Header="Title" Width="50"/>
+                    <c1:GridColumn Binding="Title" Header="Title" MinWidth="300" Width="*"/>
+                    <c1:GridColumn Binding="ChannelTitle" Header="Channel"/>
+                </c1:FlexGrid.Columns>
+                <c1:FlexGrid.Behaviors>
+                    <c1:EmptyGridBehavior EmptyView="{x:Reference Name=emptyListLabel}" />
+                </c1:FlexGrid.Behaviors>
+            </c1:FlexGrid>
+            <Label x:Name="emptyListLabel"
+             HorizontalOptions="Center"/>
+            <c1:C1ActivityIndicator x:Name="activityIndicator" VerticalOptions="Center"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
