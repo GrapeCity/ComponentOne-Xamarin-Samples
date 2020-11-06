@@ -1,0 +1,75 @@
+
+/* Class = "UINavigationItem"; title = "Sunburst101"; ObjectID = "hBU-cv-p7d"; */
+"hBU-cv-p7d.title" = "Sunburst101";
+
+/* Class = "UINavigationItem"; title = "Getting Started"; ObjectID = "JAD-ZU-lG7"; */
+"JAD-ZU-lG7.title" = "Sunburstチャートの基本機能";
+
+/* Class = "UINavigationItem"; title = "Data Labels"; ObjectID = "XsC-BQ-XP5"; */
+"XsC-BQ-XP5.title" = "グループコレクション";
+
+/* Class = "UINavigationItem"; title = "Basic Features"; ObjectID = "1Bh-t1-j7L"; */
+"1Bh-t1-j7L.title" = "Sunburstチャートの調整";
+
+/* Class = "UINavigationItem"; title = "Legend and TItles"; ObjectID = "eLQ-bJ-POd"; */ "eLQ-bJ-POd.title" = "凡例とタイトル";
+
+/* Class = "UINavigationItem"; title = "Selection"; ObjectID = "eKN-3d-QHk"; */
+"eKN-3d-QHk.title" = "選択";
+
+/* Class = "UINavigationItem"; title = "Selection"; ObjectID = "381"; */
+"381.title" = "周期表";
+
+
+/* Class = "UILabel"; text = "Inner radius:"; ObjectID = "gum-eA-br3"; */
+"gum-eA-br3.text" = "内径：";
+
+/* Class = "UILabel"; text = "Offset:"; ObjectID = "5vK-1t-ode"; */
+"5vK-1t-ode.text" = "オフセット:";
+
+/* Class = "UILabel"; text = "Start Angle:"; ObjectID = "3n1-EG-eIA"; */
+"3n1-EG-eIA.text" = "開始角度:";
+
+/* Class = "UILabel"; text = "Selected item offset:"; ObjectID = "YeC-Hg-P4q"; */
+"YeC-Hg-P4q.text" = "選択項目のオフセット:";
+
+/* Class = "UILabel"; text = "Reversed:"; ObjectID = "vI7-NO-f31"; */
+"vI7-NO-f31.text" = "反転する:";
+
+
+/* Class = "UISegmentedControl"; zoS-At-X9B.segmentTitles[1] = "Left"; ObjectID = "zoS-At-X9B"; */
+"zoS-At-X9B.segmentTitles[0]" = "左側(Left)";
+
+/* Class = "UISegmentedControl"; zoS-At-X9B.segmentTitles[2] = "Right"; ObjectID = "zoS-At-X9B"; */
+"zoS-At-X9B.segmentTitles[1]" = "右側(Right)";
+
+/* Class = "UISegmentedControl"; zoS-At-X9B.segmentTitles[3] = "Top"; ObjectID = "zoS-At-X9B"; */
+"zoS-At-X9B.segmentTitles[2]" = "上部(Top)";
+
+/* Class = "UISegmentedControl"; zoS-At-X9B.segmentTitles[4] = "Bottom"; ObjectID = "zoS-At-X9B"; */
+"zoS-At-X9B.segmentTitles[3]" = "下部(Bottom)";
+
+/* Class = "UISegmentedControl"; zoS-At-X9B.segmentTitles[4] = "Auto"; ObjectID = "zoS-At-X9B"; */
+"zoS-At-X9B.segmentTitles[4]" = "自動(Auto)";
+
+/* Class = "UISegmentedControl"; zoS-At-X9B.segmentTitles[0] = "None"; ObjectID = "zoS-At-X9B"; */
+"zoS-At-X9B.segmentTitles[5]" = "なし(None)";
+
+
+/* Class = "UISegmentedControl"; 9fT-Oa-6CG.segmentTitles[1] = "Left"; ObjectID = "9fT-Oa-6CG"; */
+"9fT-Oa-6CG.segmentTitles[0]" = "左側(Left)";
+
+/* Class = "UISegmentedControl"; 9fT-Oa-6CG.segmentTitles[2] = "Top"; ObjectID = "9fT-Oa-6CG"; */
+"9fT-Oa-6CG.segmentTitles[1]" = "右側(Right)";
+
+/* Class = "UISegmentedControl"; 9fT-Oa-6CG.segmentTitles[3] = "Right"; ObjectID = "9fT-Oa-6CG"; */
+"9fT-Oa-6CG.segmentTitles[2]" = "上部(Top)";
+
+/* Class = "UISegmentedControl"; 9fT-Oa-6CG.segmentTitles[4] = "Bottom"; ObjectID = "9fT-Oa-6CG"; */
+"9fT-Oa-6CG.segmentTitles[3]" = "下部(Bottom)";
+
+/* Class = "UISegmentedControl"; 9fT-Oa-6CG.segmentTitles[4] = "Auto"; ObjectID = "9fT-Oa-6CG"; */
+"9fT-Oa-6CG.segmentTitles[4]" = "自動(Auto)";
+
+/* Class = "UISegmentedControl"; 9fT-Oa-6CG.segmentTitles[0] = "None"; ObjectID = "9fT-Oa-6CG"; */
+"9fT-Oa-6CG.segmentTitles[5]" = "なし(None)";
+

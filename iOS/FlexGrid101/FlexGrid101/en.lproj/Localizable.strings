@@ -1,0 +1,14 @@
+﻿"Monday" = "Monday";
+"Tuesday" = "Tuesday";
+"Wednesday" = "Wednesday" ;
+"Thursday" = "Thursday";
+"Friday" = "Friday";
+"Saturday" = "Saturday";
+"Sunday" = "Sunday";
+"Weekend" = "Weekend";
+"Weekday" = "Weekday";
+
+"Row Details Country" = "Country";
+"Row Details City" =	"City";
+"Row Details Address" = "Address";
+"Row Details PostalCode" = "Postal Code";

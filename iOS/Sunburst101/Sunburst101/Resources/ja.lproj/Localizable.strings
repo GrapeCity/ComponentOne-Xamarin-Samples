@@ -1,0 +1,36 @@
+﻿//
+//  Localizable.strings
+//  Sunburst101
+//
+//  Copyright (c) 2015 GrapeCity. All rights reserved.
+//
+
+// Samples Title
+
+"Getting Started" = "Sunburstチャートの基本機能";
+
+"Group Collection" = "グループコレクション";
+
+"Basic Features" = "Sunburstチャートの調整";
+
+"Legend And Titles" = "Sunburstチャートの凡例とタイトル";
+
+"Selection" = "Sunburstチャートの選択";
+
+"Periodic Table" = "周期表";
+
+
+// Samples Description
+
+"Shows a simple sunburst chart with tooltips." = "ツールチップを備えたSunburstチャートを表示";
+
+"Shows Sunburst chart with grouped DataCollection." = "グループ化されたCollectionViewを持つSunburstチャートを表示";
+
+"Shows inner radius, offset, and start angle." = "内側半径、オフセット、開始角度";
+
+"Shows header,footer and legend positioning." = "ヘッダ、フッタ、凡例の位置を表示";
+
+"Shows selection animation, offset, and positioning." = "選択したアニメーション、オフセット、および配置を表示";
+
+"Shows periodic table in sunburst." = "Sunburstチャートで周期表を表示";
+

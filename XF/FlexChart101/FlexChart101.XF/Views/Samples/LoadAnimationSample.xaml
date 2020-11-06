@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c1="http://schemas.grapecity.com/xf/2019/xaml"
+             x:Class="FlexChart101.LoadAnimationSample"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             >
+    <StackLayout Margin="10" HorizontalOptions="FillAndExpand">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lblChartType" Text="Chart Type" Grid.Row="0" Grid.Column="0"/>
+            <Label x:Name="lblStacking" Text="Stacking" Grid.Row="0" Grid.Column="1" />
+            <Label x:Name="lblAnimationMode" Text="Animation Mode" Grid.Row="0" Grid.Column="2" />
+            <Label x:Name="lblRotated" Text="Rotated" Grid.Row="0" Grid.Column="3" />
+            <Picker x:Name="pickerChartType" Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand" SelectedIndexChanged = "pickerChartType_SelectedIndexChanged" />
+            <Picker x:Name="pickerStackType" Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" SelectedIndexChanged="pickerStackType_SelectedIndexChanged" />
+            <Picker x:Name="pickerAnimationMode" Grid.Row="1" Grid.Column="2" HorizontalOptions="FillAndExpand" SelectedIndexChanged="pickerAnimationMode_SelectedIndexChanged" />
+            <Switch x:Name="toggleRotated" Grid.Row="1" Grid.Column="3" BindingContext="{x:Reference flexChart}" IsToggled="{Binding Rotated,Mode=OneWayToSource}"  Toggled="Handle_Toggled"/>
+        </Grid>
+        <Grid  VerticalOptions="FillAndExpand">
+            <c1:FlexChart x:Name="flexChart" Header="2017 Performance" BindingX="Name" VerticalOptions="FillAndExpand">
+                <c1:FlexChart.HeaderStyle>
+                    <c1:ChartStyle FontSize="18"/>
+                </c1:FlexChart.HeaderStyle>
+            </c1:FlexChart>
+        </Grid>
+    </StackLayout>
+</ContentPage>

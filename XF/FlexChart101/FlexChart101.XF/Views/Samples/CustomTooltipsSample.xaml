@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlexChart101.CustomTooltipsSample"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             xmlns:c1="http://schemas.grapecity.com/xf/2019/xaml" 
+             xmlns:common="clr-namespace:FlexChart101;assembly=FlexChart101.XF" x:Name="page">
+<ContentPage.Resources>
+    <ResourceDictionary>
+      <common:FlagConverter x:Key="converter" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <StackLayout>
+    <Grid  VerticalOptions="FillAndExpand">
+            <c1:FlexChart x:Name="chart" Header="2017 Performance" ItemsSource="{Binding Data}" BindingX="Name" ChartType="Column" VerticalOptions="FillAndExpand">
+                <c1:FlexChart.HeaderStyle>
+                    <c1:ChartStyle FontSize="18"/>
+                </c1:FlexChart.HeaderStyle>
+                <c1:FlexChart.Series>
+        <c1:ChartSeries Binding="Sales" SeriesName="Sales" />
+        <c1:ChartSeries Binding="Expenses" SeriesName="Expenses" />
+        <c1:ChartSeries Binding="Downloads" SeriesName="Downloads" />
+      </c1:FlexChart.Series>
+
+      <c1:FlexChart.ToolTip>
+        <c1:ChartTooltip IsOpen="false" Padding="0">
+          <StackLayout BackgroundColor="#FFFFCA" Padding="5">
+            <StackLayout Orientation = "Horizontal">
+              <Image x:Name="image" Source="{Binding ValueX, Mode=OneWay, Converter={StaticResource converter}}"/>
+              <Label x:Name="label1" Text="{Binding SeriesName}" TextColor="Black" FontAttributes="Bold" FontSize="15"></Label>
+            </StackLayout>
+            <Label x:Name="label2" Text="{Binding DataY, StringFormat='{0:c2}'}" TextColor="Black" FontSize="15" HorizontalOptions="Center"></Label>
+          </StackLayout>
+        </c1:ChartTooltip>
+      </c1:FlexChart.ToolTip>
+    </c1:FlexChart>
+    </Grid>
+  </StackLayout>
+</ContentPage>

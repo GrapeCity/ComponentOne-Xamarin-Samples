@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c1="http://schemas.grapecity.com/xf/2019/xaml"
+             xmlns:local="clr-namespace:Sunburst101"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             x:Class="Sunburst101.PeriodicTable">
+    <StackLayout>
+        <Grid IsClippedToBounds="True" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <c1:C1Sunburst   VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+            x:Name="sunburst"            
+            ToolTip="{x:Null}"
+            LegendPosition="None"
+            InnerRadius="0.3"
+            SelectionMode="Point"
+            Binding="Value"
+            BindingName="GroupName,SubGroupName,Symbol"
+            ChildItemsPath="SubGroups,Elements"
+            >
+                <c1:C1Sunburst.DataLabel>
+                    <c1:PieDataLabel Position="Center"  Content="{}{name}" Border="False">
+                        <c1:PieDataLabel.Style>
+                            <c1:ChartStyle Stroke="White" FontAttributes="Bold"/>
+                        </c1:PieDataLabel.Style>
+                    </c1:PieDataLabel>
+                </c1:C1Sunburst.DataLabel>
+                <c1:C1Sunburst.SelectionStyle>
+                    <c1:ChartStyle Stroke="Black" />
+                </c1:C1Sunburst.SelectionStyle>
+            </c1:C1Sunburst>
+            </Grid>
+        </StackLayout>
+</ContentPage>

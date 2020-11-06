@@ -1,0 +1,16 @@
+﻿"Monday" = "Monday";
+"Tuesday" = "Tuesday";
+"Wednesday" = "Wednesday" ;
+"Thursday" = "Thursday";
+"Friday" = "Friday";
+"Saturday" = "Saturday";
+"Sunday" = "Sunday";
+"Weekend" = "Weekend";
+"Weekday" = "Weekday";
+
+"ChangeBackground" = "背景色の変更";
+"FileSavedTo" = "ファイルが保存されました";
+"Save" = "保存";
+"SaveAs" = "形式を指定して保存";
+"Saved" = "保存されました";
+"ExportToBitmap" = "エクスポートbitmap";

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c1="http://schemas.grapecity.com/xf/2019/xaml"
+             x:Class="FlexChart101.PieThemingSample"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             >
+    <StackLayout Margin="10" HorizontalOptions="FillAndExpand">
+        <StackLayout Orientation="Horizontal">
+            <Label x:Name="lblTheming" Text="Theming"  VerticalOptions="Center" />
+            <Picker x:Name="pickerTheming"  HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+        <c1:FlexPie BindingName = "Name" Header="Fruit By Value" Binding = "Value" LegendPosition="Bottom" x:Name="flexPie" VerticalOptions="FillAndExpand">
+            <c1:FlexPie.HeaderStyle>
+                <c1:ChartStyle FontSize="18"/>
+            </c1:FlexPie.HeaderStyle>
+        </c1:FlexPie>
+    </StackLayout>
+</ContentPage>

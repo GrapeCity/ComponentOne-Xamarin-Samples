@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:c1="http://schemas.grapecity.com/xf/2019/xaml"
+            x:Class="DashboardDemo.Views.AnalysisPage"
+            BarBackgroundColor="#051839" 
+            BarTextColor="White">
+
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem x:Name="btnMonthData" Order="Secondary" Priority="0" Activated="OnMonthData"/>
+        <ToolbarItem x:Name="btn3MonthsData" Order="Secondary" Priority="0" Activated="On3MonthsData"/>
+        <ToolbarItem x:Name="btn6MonthsData" Order="Secondary" Priority="0" Activated="On6MonthsData"/>
+        <ToolbarItem x:Name="btnYearData" Order="Secondary" Priority="0" Activated="OnYearData"/>
+        <ToolbarItem x:Name="btn2YearsData" Order="Secondary" Priority="0" Activated="On2YearsData"/>
+    </TabbedPage.ToolbarItems>
+
+    <ContentPage x:Name="pagePS" Icon="pie.png">
+        <Grid Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#6D82A5" Grid.Row="0">
+                <Label x:Name="lblPWQYS" FontSize="Large" BackgroundColor="#6D82A5" TextColor="White"  Margin="5,3,0,3" />
+            </StackLayout>
+            <c1:FlexPie x:Name="flexPie"
+                             AnimationMode="Point"
+                             Binding="Sales"
+                             Palette="Custom"    
+                             BindingName="RegionName" 
+                             SelectedItemOffset="0.2" 
+                             SelectionMode="Point" 
+                             LegendPosition="Bottom"
+                             Grid.Row="1">
+            </c1:FlexPie>
+            <!--StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Center">
+                <Button x:Name="btnFilter" Text="Filter" Clicked="OnFilterClicked" HorizontalOptions="Center" WidthRequest="100"
+                        BackgroundColor="#051839" TextColor="White" Margin="0,5,0,5"/>
+            </-->
+        </Grid>
+    </ContentPage>
+
+    <ContentPage x:Name="pageCO" Icon="chart_column.png">
+        <Grid Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#6D82A5" Grid.Row="0">
+                <Label x:Name="lblCOLS" BackgroundColor="#6D82A5" TextColor="White" FontSize="Large" Margin="0,3,0,3" />
+            </StackLayout>
+            <c1:FlexChart x:Name="flexChart"
+                               AnimationMode="All"
+                               BindingX="Level"
+                               Palette="Custom"    
+                               LegendPosition="Bottom" 
+                               ShowTooltip="False" 
+                               VerticalOptions="FillAndExpand"
+                               Margin="10,0,10,0"
+                               Grid.Row="1">
+                <c1:FlexChart.Series>
+                    <c1:ChartSeries Binding="Sales" SeriesName="Sales" />
+                    <c1:ChartSeries Binding="TotalSales" SeriesName="TotalSales" />
+                </c1:FlexChart.Series>
+                <c1:FlexChart.AxisY>
+                    <c1:ChartAxis AxisLine="False" MajorTickMarks="None" MajorGrid="False" MinorGrid="False" Labels="false" />
+                </c1:FlexChart.AxisY>
+                <c1:FlexChart.DataLabel>
+                    <c1:ChartDataLabel Content="{}${y}" Position="Bottom" Border="False">
+                        <c1:ChartDataLabel.Style>
+                            <c1:ChartStyle Fill="#aaffffff" FontSize="14"/>
+                        </c1:ChartDataLabel.Style>
+                    </c1:ChartDataLabel>
+                </c1:FlexChart.DataLabel>
+            </c1:FlexChart>
+        </Grid>
+    </ContentPage>
+
+</TabbedPage>

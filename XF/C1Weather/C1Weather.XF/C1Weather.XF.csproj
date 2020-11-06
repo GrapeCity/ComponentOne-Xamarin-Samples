@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>C1Weather</RootNamespace>
+    <NeutralLanguage>en</NeutralLanguage>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="C1Weather.XF.csproj.vspscc" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="C1.Xamarin.Forms.Chart">
+      <Version>4.8.20203.485</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xamarin.Forms.Core">
+      <Version>4.8.20203.485</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Xamarin.Forms.Grid">
+      <Version>4.8.20203.485</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="Plugin.Permissions" Version="3.0.0.12" />
+    <PackageReference Include="Xam.Plugin.Geolocator" Version="4.5.0.6" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
+  </ItemGroup>
+</Project>

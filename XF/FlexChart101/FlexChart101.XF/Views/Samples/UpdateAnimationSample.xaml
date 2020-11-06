@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c1="http://schemas.grapecity.com/xf/2019/xaml"
+             x:Class="FlexChart101.UpdateAnimationSample"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             Padding="10">
+    <StackLayout HorizontalOptions="FillAndExpand">
+        <Grid ColumnSpacing="5" Margin="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition x:Name="ButtonCol" Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lblChartType" Text="Chart Type" Grid.Row="0" Grid.Column="0"/>
+            <Picker x:Name="pickerChartType" Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand" SelectedIndexChanged = "pickerChartType_SelectedIndexChanged" />
+
+            <Label x:Name="lblUpdatePosition" Text="Update Position" Grid.Row="0" Grid.Column="1" />
+            <Picker x:Name="pickerUpdatePosition" Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" />
+
+            <Button x:Name="btnAdd" Text="Add" BackgroundColor="#FF9800" TextColor="White" Grid.Row="0" Grid.Column="2" Clicked="OnAddPoint"/>
+            <Button x:Name="btnRemove" Text="Remove" BackgroundColor="#FF9800" TextColor="White" Grid.Row="1" Grid.Column="2" Clicked="OnRemovePoint"/>
+
+        </Grid>
+        <Grid  VerticalOptions="FillAndExpand">
+            <c1:FlexChart x:Name="flexChart" 
+                        BindingX="XValue"
+                        Header="Popular Letters"  
+                        VerticalOptions="FillAndExpand">
+                <c1:FlexChart.HeaderStyle>
+                    <c1:ChartStyle FontSize="18"/>
+                </c1:FlexChart.HeaderStyle>
+                <c1:FlexChart.Series>
+                    <c1:ChartSeries Binding="Value" SeriesName="Value" />
+                </c1:FlexChart.Series>
+            </c1:FlexChart>
+        </Grid>
+    </StackLayout>
+</ContentPage>

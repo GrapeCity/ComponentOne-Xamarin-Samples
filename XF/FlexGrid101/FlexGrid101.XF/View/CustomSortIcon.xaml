@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlexGrid101.CustomSortIcon"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             xmlns:c1="http://schemas.grapecity.com/xf/2019/xaml">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Picker x:Name="sortIconPosition" Title="Sort Icon Position" SelectedIndexChanged="SortIconPositionChanged"/>
+        <Picker x:Name="sortIconTemplate" Title="Sort Icon Template" SelectedIndexChanged="SortIconTemplateChanged" Grid.Row="1"/>
+        <c1:FlexGrid x:Name="grid" SortIconPosition="Left" Grid.Row="2">
+            <c1:FlexGrid.SortAscendingIconTemplate>
+                <c1:C1IconTemplate>
+                    <DataTemplate>
+                        <c1:C1BitmapIcon ShowAsMonochrome="False" Source="arrow_up.png"/>
+                    </DataTemplate>
+                </c1:C1IconTemplate>
+            </c1:FlexGrid.SortAscendingIconTemplate>
+        </c1:FlexGrid>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,16 @@
+﻿"Monday" = "Monday";
+"Tuesday" = "Tuesday";
+"Wednesday" = "Wednesday" ;
+"Thursday" = "Thursday";
+"Friday" = "Friday";
+"Saturday" = "Saturday";
+"Sunday" = "Sunday";
+"Weekend" = "Weekend";
+"Weekday" = "Weekday";
+
+"ChangeBackground" = "Change Background";
+"FileSavedTo" = "File has been saved to ";
+"Save" = "Save";
+"SaveAs" = "Save As";
+"Saved" = "Saved";
+"ExportToBitmap" = "Export to bitmap";

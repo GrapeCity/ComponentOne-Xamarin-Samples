@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c1="http://schemas.grapecity.com/xf/2019/xaml"
+             xmlns:sample="clr-namespace:C1Input101;assembly=C1Input101.XF"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             FlowDirection="{x:Static Device.FlowDirection}"
+             ios:Page.UseSafeArea="true"
+             x:Class="C1Input101.AutoCompleteSample" x:Name="page"
+             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <sample:FlagConverter x:Key="flagConverter" />
+            <DataTemplate x:Key="flagTemplate">
+                <StackLayout Orientation="Horizontal" Padding="0, 2, 0, 2">
+                    <Image Source="{Binding Name, Converter={StaticResource flagConverter}}" WidthRequest="48" HeightRequest="48" />
+                    <Label Text="{Binding Name}" VerticalTextAlignment="Center" WidthRequest="150"/>
+                </StackLayout>
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout BindingContext="{x:Reference page}" Orientation="Vertical" Margin="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="ACMLabel" Grid.Column="0" Grid.Row="0"/>
+            <Picker x:Name="ACMPicker" SelectedIndexChanged="ACMPicker_SelectedIndexChanged" Grid.Column="0" Grid.Row="1"/>
+            <Label x:Name="ClearLabel" HorizontalOptions="End" Grid.Column="1" Grid.Row="0"/>
+            <Switch x:Name="ClearSwitch" HorizontalOptions="End" Toggled="ClearSwitch_Toggled" Grid.Column="1" Grid.Row="1"/>
+        </Grid>
+        <Label Text="{Binding HighlightsText}" />
+        <c1:C1AutoComplete x:Name="HighlightAC" ItemsSource="{Binding Countries}" DropDownBehavior="ButtonTap" HorizontalOptions="FillAndExpand" DisplayMemberPath="Name"/>
+        <Label Text="{Binding CustomDropDownText}" />
+        <c1:C1AutoComplete x:Name="CustomAC" ItemsSource="{Binding CountriesWithFlag}" ItemTemplate="{StaticResource flagTemplate}" HorizontalOptions="FillAndExpand" DisplayMemberPath="Name"/>
+        <Label Text="{Binding DynamicText}" />
+        <c1:C1AutoComplete x:Name="DynamicAC" HorizontalOptions="FillAndExpand" DisplayMemberPath="Title" Delay="0:0:0.5" Filtering="OnDynamicFiltering"/>
+    </StackLayout>
+</ContentPage>

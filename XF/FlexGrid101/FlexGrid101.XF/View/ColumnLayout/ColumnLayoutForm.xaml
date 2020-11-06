@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlexGrid101.ColumnLayoutForm"
+             xmlns:c1="http://schemas.grapecity.com/xf/2019/xaml"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <c1:FlexGrid x:Name="grid" ItemsSource="{Binding}" AutoGenerateColumns="False" HeadersVisibility="None" GridLinesVisibility="Horizontal" SelectionMode="None" SelectionBackgroundColor="White">
+            <c1:FlexGrid.Columns>
+                <c1:GridColumn Binding="Title" Width="*" IsReadOnly="True"/>
+                <c1:GridColumn IsReadOnly="True" Width="80">
+                    <c1:GridColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Text="&#x25BC;" Command="{Binding DownCommand}" VerticalOptions="Center"/>
+                        </DataTemplate>
+                    </c1:GridColumn.CellTemplate>
+                </c1:GridColumn>
+                <c1:GridColumn IsReadOnly="True" Width="80">
+                    <c1:GridColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Text="&#x25B2;" Command="{Binding UpCommand}" VerticalOptions="Center"/>
+                        </DataTemplate>
+                    </c1:GridColumn.CellTemplate>
+                </c1:GridColumn>
+            </c1:FlexGrid.Columns>
+            <c1:FlexGrid.Behaviors>
+                <c1:CheckListBehavior SelectionBinding="IsVisible"/>
+            </c1:FlexGrid.Behaviors>
+        </c1:FlexGrid>
+        <StackLayout Grid.Row="1" Orientation="Horizontal">
+            <Button x:Name="btnOK" Clicked="OKClicked" HorizontalOptions="FillAndExpand"/>
+            <Button x:Name="btnCancel" Clicked="CancelClicked" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

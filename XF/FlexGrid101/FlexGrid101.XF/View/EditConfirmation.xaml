@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlexGrid101.EditConfirmation"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             xmlns:c1="http://schemas.grapecity.com/xf/2019/xaml">
+    <c1:FlexGrid x:Name="grid" Grid.Row="1" 
+                 AutoGenerateColumns="False" 
+                 BeginningEdit="OnBeginningEdit" 
+                 CellEditEnded="OnCellEditEnded"
+                 GridLinesVisibility="None"
+                 ColumnHeaderGridLinesVisibility="None"
+                 HeadersVisibility="Column"
+                 BackgroundColor="White"
+                 RowBackgroundColor="#FFE2EFDB"
+                 RowTextColor="Black"
+                 AlternatingRowBackgroundColor="White"
+                 ColumnHeaderBackgroundColor="#FF70AD46"
+                 ColumnHeaderTextColor="White"
+                 ColumnHeaderFontAttributes="Bold"
+                 SelectionBackgroundColor="#FF5A823F"
+                 SelectionTextColor="White">
+        <c1:FlexGrid.Columns>
+            <c1:GridColumn Binding="Id" IsReadOnly="true" MinWidth="70" Width="*"/>
+            <c1:GridColumn Binding="FirstName" MinWidth="100" Width="*"/>
+            <c1:GridColumn Binding="LastName" MinWidth="100" Width="*"/>
+            <c1:GridColumn Binding="Address" MinWidth="150" Width="*"/>
+            <c1:GridColumn Binding="City" MinWidth="100" Width="*"/>
+            <c1:GridColumn Binding="PostalCode" MinWidth="100" Width="*"/>
+            <c1:GridColumn Binding="Active" MinWidth="70" Width="*"/>
+        </c1:FlexGrid.Columns>
+    </c1:FlexGrid>
+</ContentPage>
