@@ -1,5 +1,5 @@
 ## FlexViewer101 for Xamarin.iOS
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-Xamarin-Samples/tree/master/\iOS\FlexViewer101)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-Xamarin-Samples/tree/master/iOS/FlexViewer101)
 ____
 #### Shows samples of the FlexViewer control.
 ____

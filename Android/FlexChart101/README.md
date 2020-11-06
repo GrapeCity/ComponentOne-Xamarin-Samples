@@ -1,5 +1,5 @@
 ## FlexChart101 for Xamarin Forms
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-Xamarin-Samples/tree/master/\Android\FlexChart101)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-Xamarin-Samples/tree/master/Android/FlexChart101)
 ____
 #### Shows samples of the Chart control.
 ____
