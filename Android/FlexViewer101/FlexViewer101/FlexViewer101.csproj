@@ -57,10 +57,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Android.Core">
-      <Version>4.8.20203.485</Version>
+      <Version>4.8.20203.486</Version>
     </PackageReference>
     <PackageReference Include="C1.Android.Viewer">
-      <Version>4.8.20203.485</Version>
+      <Version>4.8.20203.486</Version>
     </PackageReference>
     <PackageReference Include="GrapeCity.Documents.Pdf">
       <Version>3.2.0.556</Version>

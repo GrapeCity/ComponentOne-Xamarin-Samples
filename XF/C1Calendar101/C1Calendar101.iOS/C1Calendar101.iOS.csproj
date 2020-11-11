@@ -123,22 +123,22 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.iOS.Calendar">
-      <Version>4.8.20203.485</Version>
+      <Version>4.8.20203.486</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Core">
-      <Version>4.8.20203.485</Version>
+      <Version>4.8.20203.486</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Calendar">
-      <Version>4.8.20203.485</Version>
+      <Version>4.8.20203.486</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Calendar">
-      <Version>4.8.20203.485</Version>
+      <Version>4.8.20203.486</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>4.8.20203.485</Version>
+      <Version>4.8.20203.486</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>4.8.20203.485</Version>
+      <Version>4.8.20203.486</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
   </ItemGroup>
