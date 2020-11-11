@@ -92,13 +92,13 @@
       <Version>1.0.20203.32</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Calendar">
-      <Version>4.8.20203.485</Version>
+      <Version>4.8.20203.486</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Core">
-      <Version>4.8.20203.485</Version>
+      <Version>4.8.20203.486</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Input">
-      <Version>4.8.20203.485</Version>
+      <Version>4.8.20203.486</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

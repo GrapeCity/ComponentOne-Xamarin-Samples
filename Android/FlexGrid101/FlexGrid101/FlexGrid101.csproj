@@ -57,16 +57,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Android.Core">
-      <Version>4.8.20203.485</Version>
+      <Version>4.8.20203.486</Version>
     </PackageReference>
     <PackageReference Include="C1.Android.Gauge">
-      <Version>4.8.20203.485</Version>
+      <Version>4.8.20203.486</Version>
     </PackageReference>
     <PackageReference Include="C1.Android.Grid">
-      <Version>4.8.20203.485</Version>
+      <Version>4.8.20203.486</Version>
     </PackageReference>
     <PackageReference Include="C1.Android.Input">
-      <Version>4.8.20203.485</Version>
+      <Version>4.8.20203.486</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Constraint.Layout">
       <Version>1.1.2</Version>
