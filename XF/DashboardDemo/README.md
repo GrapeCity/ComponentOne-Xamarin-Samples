@@ -1,5 +1,5 @@
 ## DashboardDemo for Xamarin Forms
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-Xamarin-Samples/tree/master/XF/DashboardDemo)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-Xamarin-Samples/tree/master/XF/DashboardDemo)
 ____
 #### A multiple screen dashboard app that display data.
 ____

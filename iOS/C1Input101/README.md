@@ -1,5 +1,5 @@
 ## C1Input101 for Xamarin.iOS
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-Xamarin-Samples/tree/master/iOS/C1Input101)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-Xamarin-Samples/tree/master/iOS/C1Input101)
 ____
 #### Shows samples of the Input controls.
 ____

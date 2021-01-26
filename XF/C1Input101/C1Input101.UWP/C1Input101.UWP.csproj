@@ -188,22 +188,22 @@
       <Version>1.0.20203.32</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Calendar">
-      <Version>4.8.20203.486</Version>
+      <Version>4.8.20203.495</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Calendar">
-      <Version>4.8.20203.486</Version>
+      <Version>4.8.20203.495</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>4.8.20203.486</Version>
+      <Version>4.8.20203.495</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>4.8.20203.486</Version>
+      <Version>4.8.20203.495</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Input">
-      <Version>4.8.20203.486</Version>
+      <Version>4.8.20203.495</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Input">
-      <Version>4.8.20203.486</Version>
+      <Version>4.8.20203.495</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.ApplicationInsights">
       <Version>2.4.0</Version>
