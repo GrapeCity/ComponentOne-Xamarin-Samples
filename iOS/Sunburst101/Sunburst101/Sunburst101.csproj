@@ -100,10 +100,10 @@
       <Version>1.0.20203.32</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Chart">
-      <Version>4.8.20203.486</Version>
+      <Version>4.8.20203.495</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Core">
-      <Version>4.8.20203.486</Version>
+      <Version>4.8.20203.495</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

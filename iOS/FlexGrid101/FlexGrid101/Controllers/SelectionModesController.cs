@@ -79,7 +79,7 @@ namespace FlexGrid101
 
             public override nint GetRowsInComponent(UIPickerView picker, nint component)
             {
-                return 5;
+                return 7;
             }
 
             public override string GetTitle(UIPickerView picker, nint row, nint component)

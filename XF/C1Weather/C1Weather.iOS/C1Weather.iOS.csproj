@@ -125,31 +125,31 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.iOS.Chart">
-      <Version>4.8.20203.486</Version>
+      <Version>4.8.20203.495</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Core">
-      <Version>4.8.20203.486</Version>
+      <Version>4.8.20203.495</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Grid">
-      <Version>4.8.20203.486</Version>
+      <Version>4.8.20203.495</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Chart">
-      <Version>4.8.20203.486</Version>
+      <Version>4.8.20203.495</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Chart">
-      <Version>4.8.20203.486</Version>
+      <Version>4.8.20203.495</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>4.8.20203.486</Version>
+      <Version>4.8.20203.495</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>4.8.20203.486</Version>
+      <Version>4.8.20203.495</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Grid">
-      <Version>4.8.20203.486</Version>
+      <Version>4.8.20203.495</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Grid">
-      <Version>4.8.20203.486</Version>
+      <Version>4.8.20203.495</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
     <PackageReference Include="Plugin.Permissions">

@@ -53,13 +53,11 @@ namespace MyBI
             System.IO.Stream stream;
             try
             {
-                HttpClient httpClient = new HttpClient();
-                stream = httpClient.GetStreamAsync("https://docs.google.com/spreadsheets/d/e/2PACX-1vTTU_DjLrC_AMfTaGMEmi5HfastFteMfqK3w2ZB3FKQzYOe6hPYSeoLYsdz0RyyOcoGvdBal4rT8kMG/pub?gid=791843885&single=true&output=csv").Result;
-
+                stream = _assembly.GetManifestResourceStream("MyBI.Data.Region.csv");
             }
             catch
             {
-                stream = _assembly.GetManifestResourceStream("MyBI.Data.Region.csv");
+                stream = null;
             }
             if (stream == null)
                 return false;
@@ -88,13 +86,12 @@ namespace MyBI
             System.IO.Stream stream;
             try
             {
-                HttpClient httpClient = new HttpClient();
-                stream = httpClient.GetStreamAsync("https://docs.google.com/spreadsheets/d/e/2PACX-1vS8keuE8lw59mGtiyYEL4cUg_Ol4562EFK3OIVS6N6sEP488ryBkKbJfvhcxyZoMqXKJWkKnInUSg7r/pub?gid=1026568403&single=true&output=csv").Result;
+                stream = _assembly.GetManifestResourceStream("MyBI.Data.Product.csv");
 
             }
             catch
             {
-                stream = _assembly.GetManifestResourceStream("MyBI.Data.Product.csv");
+                stream = null;
             }
 
             if (stream == null)
@@ -125,13 +122,12 @@ namespace MyBI
             System.IO.Stream stream;
             try
             {
-                HttpClient httpClient = new HttpClient();
-                stream = httpClient.GetStreamAsync("https://docs.google.com/spreadsheets/d/e/2PACX-1vQoBs04ToMJRVzHo0FLy5wWS4fQJcBFH-4Ojt5bK3IAbDxKv55-bTQDloEH4U2MNQ6XvMZP_zThG9Mn/pub?gid=345838079&single=true&output=csv").Result;
+                stream = _assembly.GetManifestResourceStream("MyBI.Data.Data.csv");
 
             }
             catch
             {
-                stream = _assembly.GetManifestResourceStream("MyBI.Data.Data.csv");
+                stream = null;
             }
 
             if (stream == null)

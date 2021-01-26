@@ -193,19 +193,19 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>4.8.20203.486</Version>
+      <Version>4.8.20203.495</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>4.8.20203.486</Version>
+      <Version>4.8.20203.495</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Gauge">
-      <Version>4.8.20203.486</Version>
+      <Version>4.8.20203.495</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Grid">
-      <Version>4.8.20203.486</Version>
+      <Version>4.8.20203.495</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Grid">
-      <Version>4.8.20203.486</Version>
+      <Version>4.8.20203.495</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.ApplicationInsights">
       <Version>2.9.1</Version>
