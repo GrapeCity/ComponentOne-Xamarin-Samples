@@ -43,10 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>4.8.20203.495</Version>
+      <Version>4.8.20211.499</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Viewer">
-      <Version>4.8.20203.495</Version>
+      <Version>4.8.20211.499</Version>
     </PackageReference>
     <PackageReference Include="System.ComponentModel" Version="4.3.0" />
     <PackageReference Include="System.Runtime.Serialization.Json" Version="4.3.0" />

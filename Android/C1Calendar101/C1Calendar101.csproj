@@ -49,10 +49,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Android.Calendar">
-      <Version>4.8.20203.495</Version>
+      <Version>4.8.20211.499</Version>
     </PackageReference>
     <PackageReference Include="C1.Android.Core">
-      <Version>4.8.20203.495</Version>
+      <Version>4.8.20211.499</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Constraint.Layout">
       <Version>1.0.2.2</Version>
