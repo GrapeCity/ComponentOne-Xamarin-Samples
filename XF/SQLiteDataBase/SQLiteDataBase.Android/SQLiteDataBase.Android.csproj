@@ -57,22 +57,22 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Android.Core">
-      <Version>4.8.20211.499</Version>
+      <Version>4.8.20212.504</Version>
     </PackageReference>
     <PackageReference Include="C1.Android.Grid">
-      <Version>4.8.20211.499</Version>
+      <Version>4.8.20212.504</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>4.8.20211.499</Version>
+      <Version>4.8.20212.504</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>4.8.20211.499</Version>
+      <Version>4.8.20212.504</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Grid">
-      <Version>4.8.20211.499</Version>
+      <Version>4.8.20212.504</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Grid">
-      <Version>4.8.20211.499</Version>
+      <Version>4.8.20212.504</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore">
       <Version>2.2.2</Version>

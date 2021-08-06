@@ -184,28 +184,28 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xamarin.Forms.Chart">
-      <Version>4.8.20211.499</Version>
+      <Version>4.8.20212.504</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Chart">
-      <Version>4.8.20211.499</Version>
+      <Version>4.8.20212.504</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>4.8.20211.499</Version>
+      <Version>4.8.20212.504</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>4.8.20211.499</Version>
+      <Version>4.8.20212.504</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Gauge">
-      <Version>4.8.20211.499</Version>
+      <Version>4.8.20212.504</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Gauge">
-      <Version>4.8.20211.499</Version>
+      <Version>4.8.20212.504</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Grid">
-      <Version>4.8.20211.499</Version>
+      <Version>4.8.20212.504</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Grid">
-      <Version>4.8.20211.499</Version>
+      <Version>4.8.20212.504</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.10" />
     <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />

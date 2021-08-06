@@ -200,10 +200,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.iOS.Core">
-      <Version>4.8.20211.499</Version>
+      <Version>4.8.20212.504</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Gauge">
-      <Version>4.8.20211.499</Version>
+      <Version>4.8.20212.504</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

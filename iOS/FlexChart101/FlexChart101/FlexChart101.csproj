@@ -94,13 +94,13 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="C1.DataCollection">
-      <Version>1.0.20211.34</Version>
+      <Version>1.0.20212.56</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Chart">
-      <Version>4.8.20211.499</Version>
+      <Version>4.8.20212.504</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Core">
-      <Version>4.8.20211.499</Version>
+      <Version>4.8.20212.504</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
