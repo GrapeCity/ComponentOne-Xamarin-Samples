@@ -51,13 +51,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xamarin.Forms.Calendar">
-      <Version>4.8.20212.504</Version>
+      <Version>4.8.20213.508</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>4.8.20212.504</Version>
+      <Version>4.8.20213.508</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Input">
-      <Version>4.8.20212.504</Version>
+      <Version>4.8.20213.508</Version>
     </PackageReference>
     <PackageReference Include="System.Runtime.Serialization.Json" Version="4.3.0" />
     <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />

@@ -16,7 +16,6 @@ namespace C1Calendar101
         {
             
             base.OnCreate(bundle);
-            C1.Android.Core.LicenseManager.Key = License.Key;
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);

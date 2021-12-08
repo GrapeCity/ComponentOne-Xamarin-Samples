@@ -89,16 +89,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.DataCollection">
-      <Version>1.0.20212.56</Version>
+      <Version>1.0.20213.60</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Calendar">
-      <Version>4.8.20212.504</Version>
+      <Version>4.8.20213.508</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Core">
-      <Version>4.8.20212.504</Version>
+      <Version>4.8.20213.508</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Input">
-      <Version>4.8.20212.504</Version>
+      <Version>4.8.20213.508</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -160,7 +160,6 @@
     <BundleResource Include="Resources\ja.lproj\Main.strings" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="License.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Samples\YouTubeDataCollection.cs" />
@@ -211,4 +210,7 @@
     <BundleResource Include="Resources\Images\srilanka.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <EmbeddedResource Include="C1Input101.gclicx" />
+  </ItemGroup>
 </Project>

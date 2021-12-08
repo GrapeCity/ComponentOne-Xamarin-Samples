@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -123,22 +123,22 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.iOS.Calendar">
-      <Version>4.8.20212.504</Version>
+      <Version>4.8.20213.508</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Core">
-      <Version>4.8.20212.504</Version>
+      <Version>4.8.20213.508</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Calendar">
-      <Version>4.8.20212.504</Version>
+      <Version>4.8.20213.508</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Calendar">
-      <Version>4.8.20212.504</Version>
+      <Version>4.8.20213.508</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>4.8.20212.504</Version>
+      <Version>4.8.20213.508</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>4.8.20212.504</Version>
+      <Version>4.8.20213.508</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
   </ItemGroup>
@@ -202,4 +202,7 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <EmbeddedResource Include="C1Calendar101iOS.gclicx" />
+  </ItemGroup>
 </Project>

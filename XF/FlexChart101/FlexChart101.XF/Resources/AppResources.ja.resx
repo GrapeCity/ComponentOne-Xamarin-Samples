@@ -533,4 +533,25 @@
   <data name="TreeMapTitle" xml:space="preserve">
     <value>ツリーマップ</value>
   </data>
+  <data name="IsAnimated" xml:space="preserve">
+    <value>IsAnimated</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="AnnotationLocalization" xml:space="preserve">
+    <value>Annotation Localization</value>
+  </data>
+  <data name="SunburstGettingStartDescription" xml:space="preserve">
+    <value>Shows a simple sunburst chart</value>
+  </data>
+  <data name="SunburstGettingStartTitle" xml:space="preserve">
+    <value>Sunburst Getting Started</value>
+  </data>
+  <data name="LineMarkerAlignment" xml:space="preserve">
+    <value>Line Marker Alignment</value>
+  </data>
+  <data name="LineType" xml:space="preserve">
+    <value>Line Type</value>
+  </data>
 </root>

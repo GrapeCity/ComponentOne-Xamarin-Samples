@@ -26,7 +26,6 @@ namespace FlexGrid101
 
             //// make the window visible
             //Window.MakeKeyAndVisible();
-            C1.iOS.Core.LicenseManager.Key = License.Key;
             return true;
         }
 

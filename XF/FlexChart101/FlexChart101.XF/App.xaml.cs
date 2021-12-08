@@ -10,10 +10,5 @@ namespace FlexChart101
 
             MainPage = new Xamarin.Forms.NavigationPage(new FlexChartSamples()) { BarBackgroundColor = Color.FromHex("#9D2235"), BarTextColor = Color.White };
         }
-
-        protected override void OnStart()
-        {
-            C1.Xamarin.Forms.Core.LicenseManager.Key = FlexChart101.License.Key;
-        }
     }
 }

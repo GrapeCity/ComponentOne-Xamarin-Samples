@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -94,17 +95,16 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="C1.DataCollection">
-      <Version>1.0.20212.56</Version>
+      <Version>1.0.20213.60</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Chart">
-      <Version>4.8.20212.504</Version>
+      <Version>4.8.20213.508</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Core">
-      <Version>4.8.20212.504</Version>
+      <Version>4.8.20213.508</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="License.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Info.plist" />
@@ -353,4 +353,7 @@
     </ImageAsset>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <EmbeddedResource Include="FlexChart101.gclicx" />
+  </ItemGroup>
 </Project>

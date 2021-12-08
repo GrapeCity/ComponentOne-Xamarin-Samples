@@ -85,19 +85,19 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="C1.DataCollection">
-      <Version>1.0.20212.56</Version>
+      <Version>1.0.20213.60</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Core">
-      <Version>4.8.20212.504</Version>
+      <Version>4.8.20213.508</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Gauge">
-      <Version>4.8.20212.504</Version>
+      <Version>4.8.20213.508</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Grid">
-      <Version>4.8.20212.504</Version>
+      <Version>4.8.20213.508</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Input">
-      <Version>4.8.20212.504</Version>
+      <Version>4.8.20213.508</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -185,7 +185,6 @@
     <Compile Include="Controllers\FilterRowController.designer.cs">
       <DependentUpon>FilterRowController.cs</DependentUpon>
     </Compile>
-    <Compile Include="License.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Controllers\SelectionModesController.cs" />
@@ -328,4 +327,7 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <EmbeddedResource Include="FlexGrid101.gclicx" />
+  </ItemGroup>
 </Project>

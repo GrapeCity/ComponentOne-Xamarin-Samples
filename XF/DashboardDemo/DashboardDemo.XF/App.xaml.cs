@@ -14,9 +14,6 @@ namespace DashboardDemo
         public App()
         {
             InitializeComponent();
-
-            C1.Xamarin.Forms.Core.LicenseManager.Key = License.Key;
-
             MainPage = new MainPage();
         }
 

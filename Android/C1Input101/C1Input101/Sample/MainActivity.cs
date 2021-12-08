@@ -19,7 +19,6 @@ namespace C1Input101
             SetSupportActionBar(toolbar);
             SupportActionBar.Title = GetString(Resource.String.ApplicationName);
 
-            C1.Android.Core.LicenseManager.Key = License.Key;
             var sampleList = (ListView)FindViewById(Resource.Id.listView1);
             SampleListAdapter adapter = new SampleListAdapter(this);
             sampleList.Adapter = adapter;

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -154,7 +154,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\LocalizationExtension.cs" />
-    <Compile Include="License.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Controllers\ViewController.cs" />
@@ -198,13 +197,16 @@
     <BundleResource Include="Resources\Images\gauge_ranges.png" />
     <BundleResource Include="Resources\Images\gauge_scaling.png" />
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <EmbeddedResource Include="C1Gauge101.gclicx" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.iOS.Core">
-      <Version>4.8.20212.504</Version>
+      <Version>4.8.20213.508</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Gauge">
-      <Version>4.8.20212.504</Version>
+      <Version>4.8.20213.508</Version>
     </PackageReference>
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
-using Xuni.SimpleDashboard.App;
+//using Xuni.SimpleDashboard.App;
 
 namespace SimpleDashboard
 {
@@ -14,8 +14,6 @@ namespace SimpleDashboard
         {
             InitializeComponent();
 
-            C1.Xamarin.Forms.Core.LicenseManager.Key = License.Key;
-            
             MainPage = GetMainPage();
 
         }

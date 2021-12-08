@@ -13,7 +13,6 @@ namespace C1Weather
         public App()
         {
             InitializeComponent();
-            LicenseManager.Key = License.Key;
             
             MainPage = new Xamarin.Forms.NavigationPage(new C1Weather.WeatherPage()) { BarBackgroundColor = Color.FromHex("#3F51B5"), BarTextColor = Color.White };
         }

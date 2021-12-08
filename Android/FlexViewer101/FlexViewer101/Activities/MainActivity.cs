@@ -16,7 +16,6 @@ namespace FlexViewer101
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            C1.Android.Core.LicenseManager.Key = License.Key;
             SetContentView(Resource.Layout.Main);
 
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);

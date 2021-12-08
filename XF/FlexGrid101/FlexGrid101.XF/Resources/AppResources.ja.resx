@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -409,5 +409,11 @@
   </data>
   <data name="FilterRowTitle" xml:space="preserve">
     <value>行のフィルタリング</value>
+  </data>
+  <data name="MatchCaseLabel" xml:space="preserve">
+    <value>Match Case</value>
+  </data>
+  <data name="MatchWholeWordLabel" xml:space="preserve">
+    <value>Match Whole Word</value>
   </data>
 </root>
