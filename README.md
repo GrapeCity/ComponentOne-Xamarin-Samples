@@ -1,30 +1,26 @@
 # ComponentOne Xamarin Samples 
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/dotnet/winforms/blob/master/LICENSE.TXT)
+Add cross-platform business controls to your iOS, Android, and UWP mobile apps.
 
-This repo contains all the sample code that is part of ComponentOne Xamarin products. There are several different projects that are organized in sub-folders. These sub-folders are organized similarly to the organization of the docs for .NET.  
+This repository contains the samples for [ComponentOne Studio for Xamarin](https://www.grapecity.com/componentone/xamarin-ui-controls). These samples provide complete implementation details for the Xamarin.Forms, Xamarin.iOS and Xamarin.Android features. They are also included with the full download and install from grapecity.com/componentone. 
 
-Issues are turned off on this repository. File issues using SupportOne .  
+The samples reference, but do not include, the control packages. The control packages can be downloaded from nuget.org.
 
-The code in this repository represents programs that demonstrate application or library scenarios. Each sample has a readme.md file that explains the sample. 
+## Building a Sample 
 
-
-## Building a sample 
-
-.NET Framework samples require VS2012 and above. 
-.NET Core samples will require VS2017 and above. You can also build any .NET Core sample using the .NET Core CLI, which is installed with the [.NET Core SDK](https://www.microsoft.com/net/download). 
-
-Then run these commands from the CLI in the directory of any sample: 
+Xamarin samples require Visual Studio 2017, Android 4.2 (API 17), iOS 10 and above. Run these commands from the CLI in the directory of any sample: 
 
 ```
 dotnet build 
 dotnet run 
 ```
+This will install any needed dependencies, build the project, and run the project respectively. 
 
-These will install any needed dependencies, build the project, and run the project respectively. 
- 
+## Resources
 
+* Product Details: https://www.grapecity.com/componentone/xamarin-ui-controls
+* Documentation: https://www.grapecity.com/componentone/docs/xamarin
+* Support Forum: https://www.grapecity.com/forums/c1-studio-xamarin
 
-## Product Documentation 
-To know more about the product, refer [documentation](https://www.grapecity.com/componentone/docs/xamarin) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/dotnet/winforms/blob/master/LICENSE.TXT)
  
