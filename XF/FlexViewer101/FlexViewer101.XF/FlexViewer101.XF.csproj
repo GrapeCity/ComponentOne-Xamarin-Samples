@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -44,15 +44,15 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Viewer">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="System.ComponentModel" Version="4.3.0" />
     <PackageReference Include="System.Runtime.Serialization.Json" Version="4.3.0" />
     <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2545" />
     <PackageReference Include="Xamarin.Plugin.FilePicker" Version="2.1.34" />
   </ItemGroup>
   <ItemGroup>

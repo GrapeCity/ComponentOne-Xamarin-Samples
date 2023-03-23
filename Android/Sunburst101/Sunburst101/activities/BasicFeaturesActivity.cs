@@ -6,14 +6,11 @@ using Android.OS;
 using System.Collections.Generic;
 using C1.Android.Chart;
 using Android.Graphics;
-using Android.Support.V7.App;
-using Android.Support.V7.Widget;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace Sunburst101
 {
     [Activity(Label = "@string/basic_features", MainLauncher = false, Icon = "@drawable/BasicFeatures")]
-    public class BasicFeaturesActivity : AppCompatActivity
+    public class BasicFeaturesActivity : Activity
     {
         private C1Sunburst sunburst;
         private float mInnerRadius = 0.3f;
@@ -29,11 +26,9 @@ namespace Sunburst101
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_basic_features);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.basic_features);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.basic_features);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initializing widgets
             sunburst = (C1Sunburst)FindViewById(Resource.Id.sunburst);

@@ -1,14 +1,12 @@
 using Android.App;
 using Android.Graphics;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using C1.Android.Chart;
 using C1.Android.Chart.Annotation;
 using C1.Android.Core;
 using System;
 using System.Collections.Generic;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexChart101
 {
@@ -66,7 +64,7 @@ namespace FlexChart101
     }
 
     [Activity(Label = "@string/annotation")]
-    public class AnnotationActivity : AppCompatActivity
+    public class AnnotationActivity : Activity
     {
         private FlexChart mChart;
 
@@ -75,11 +73,9 @@ namespace FlexChart101
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_annotation);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.annotation);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.annotation);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initializing widgets
             mChart = this.FindViewById<FlexChart>(Resource.Id.flexchart);

@@ -1,17 +1,15 @@
 using Android.App;
 using Android.Graphics;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using C1.Android.Chart;
 using FlexChart101.DataModel;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexChart101
 {
     [Activity(Label = "@string/dataLabels")]
-    public class DataLabelsActivity : AppCompatActivity
+    public class DataLabelsActivity : Activity
     {
         private FlexChart mChart;
         private Spinner mDataLabelSpinner;
@@ -20,11 +18,9 @@ namespace FlexChart101
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_data_labels);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.dataLabels);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.dataLabels);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initializing widget
             mChart = this.FindViewById<FlexChart>(Resource.Id.flexchart);

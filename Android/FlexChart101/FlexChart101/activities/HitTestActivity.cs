@@ -1,6 +1,5 @@
 using Android.App;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using C1.Android.Chart;
@@ -8,12 +7,11 @@ using C1.Android.Core;
 using FlexChart101.DataModel;
 using System;
 using System.Collections.Generic;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexChart101
 {
     [Activity(Label = "@string/hitTest")]
-    public class HitTestActivity : AppCompatActivity
+    public class HitTestActivity : Activity
     {
         private FlexChart mChart;
         private TextView mHitTestInfo;
@@ -28,11 +26,9 @@ namespace FlexChart101
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_hit_test);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.hitTest);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.hitTest);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initializing widget
             mChart = this.FindViewById<FlexChart>(Resource.Id.flexchart);

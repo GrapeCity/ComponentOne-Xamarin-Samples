@@ -1,15 +1,13 @@
 using Android.App;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using C1.Android.Chart;
 using FlexChart101.DataModel;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexChart101
 {
     [Activity(Label = "@string/legendAndTitles")]
-    public class LegendAndTitlesActivity : AppCompatActivity
+    public class LegendAndTitlesActivity : Activity
     {
         private FlexChart mChart;
 
@@ -19,11 +17,9 @@ namespace FlexChart101
             SetContentView(Resource.Layout.activity_legend_and_titles);
 
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.legendAndTitles);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.legendAndTitles);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initializing widget
             mChart = this.FindViewById<FlexChart>(Resource.Id.flexchart);

@@ -1,26 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Provider;
-using Android.Runtime;
-using Android.Support.V7.App;
 using Android.Views;
-using Android.Widget;
 using C1.Android.Viewer;
 using Plugin.FilePicker;
 using Plugin.FilePicker.Abstractions;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexViewer101
 {
     [Activity(Label = "PdfBrowserActivity")]
-    public class PdfBrowserActivity : AppCompatActivity
+    public class PdfBrowserActivity : Activity
     {
         static readonly int READ_REQUEST_CODE = 1337;
         MemoryStream memoryStream;
@@ -29,11 +21,9 @@ namespace FlexViewer101
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.PdfBrowser);
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.PdfBrowserTitle);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.PdfBrowserTitle);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
             // Create your application here
 
             flexViewer = FindViewById<FlexViewer>(Resource.Id.FlexViewer);

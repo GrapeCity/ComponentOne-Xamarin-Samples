@@ -1,15 +1,13 @@
 using Android.App;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using C1.Android.Chart;
 using FlexChart101.DataModel;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexChart101
 {
     [Activity(Label = "@string/gettingStarted")]
-    public class GettingStartedActivity : AppCompatActivity
+    public class GettingStartedActivity : Activity
     {
         private FlexChart mChart;
 
@@ -18,11 +16,9 @@ namespace FlexChart101
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_getting_started);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.gettingStarted);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.gettingStarted);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initializing widget
             mChart = this.FindViewById<FlexChart>(Resource.Id.flexchart);

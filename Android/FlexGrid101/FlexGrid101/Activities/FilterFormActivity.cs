@@ -1,7 +1,6 @@
 using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using C1.Android.Grid;
 using C1.DataCollection;
@@ -9,12 +8,11 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Runtime.Serialization;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexGrid101
 {
     [Activity(Label = "@string/FilterTitle", ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize)]
-    public class FilterFormActivity : AppCompatActivity
+    public class FilterFormActivity : Activity
     {
         public FlexGrid Grid { get; set; }
         public ObservableCollection<StringFilter> Filters { get; set; }
@@ -27,11 +25,9 @@ namespace FlexGrid101
             Filters = new ObservableCollection<StringFilter>(FilterActivity.GetFiltersFromText(filtersText));
 
             SetContentView(Resource.Layout.GettingStarted);
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.FilterTitle);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.FilterTitle);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             Grid = FindViewById<FlexGrid>(Resource.Id.Grid);
             var operators = new List<FilterOperation>();

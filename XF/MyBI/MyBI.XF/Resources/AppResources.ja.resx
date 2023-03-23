@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AboutText" xml:space="preserve">
-    <value>ビジネスインテリジェンスアプリケーションデモはXamarin.Formsを使用して作成されています。</value>
+    <value>ビジネスインテリジェンスアプリケーションデモは Xamarin.Forms を使用して作成されています。</value>
   </data>
   <data name="AboutTitle" xml:space="preserve">
     <value>このアプリについて</value>
@@ -145,7 +145,8 @@
     <value>期間</value>
   </data>
   <data name="PoweredByText" xml:space="preserve">
-    <value>Powered by ComponentOne Studio for Xamarin</value>
+    <value>Powered by ComponentOne for Xamarin</value>
+    <comment>Powered by ComponentOne Studio for Xamarin</comment>
   </data>
   <data name="ProductText" xml:space="preserve">
     <value>製品</value>

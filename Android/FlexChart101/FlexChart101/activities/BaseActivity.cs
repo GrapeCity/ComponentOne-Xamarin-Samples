@@ -1,10 +1,10 @@
+using Android.App;
 using Android.OS;
-using Android.Support.V7.App;
 using System.Collections.Generic;
 
 namespace FlexChart101
 {
-    public class BaseActivity : AppCompatActivity
+    public class BaseActivity : Activity
     {
         protected IList<object> dataSource;
         protected const string DATA_SOURCE = "DATA_SOURCE";

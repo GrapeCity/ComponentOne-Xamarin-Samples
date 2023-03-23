@@ -1,15 +1,13 @@
 using Android.App;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using C1.Android.Chart;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexChart101.Pie
 {
     [Activity(Label = "@string/gettingStarted")]
-    public class SunburstGettingStartedActivity : AppCompatActivity
+    public class SunburstGettingStartedActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -29,11 +27,9 @@ namespace FlexChart101.Pie
             layout.AddView(sunburst, param);
 
             SetContentView(layout);
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.sunburstGettingStarted);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.sunburstGettingStarted);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
         }
         public override bool OnOptionsItemSelected(IMenuItem item)

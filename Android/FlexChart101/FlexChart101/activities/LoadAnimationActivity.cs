@@ -7,7 +7,6 @@ using C1.Android.Chart;
 using C1.Android.Core;
 using FlexChart101.DataModel;
 using System;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexChart101
 {
@@ -25,11 +24,9 @@ namespace FlexChart101
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_load_animation);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.loadAnimation);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.loadAnimation);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initializing widgets
             mChart = (FlexChart)FindViewById(Resource.Id.flexchart);

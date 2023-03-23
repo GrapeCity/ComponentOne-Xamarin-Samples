@@ -1,25 +1,20 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using Android.Support.V7.App;
-using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
+using AndroidX.RecyclerView.Widget;
 using System;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexGrid101
 {
-    [Activity(Label = "@string/ApplicationName", MainLauncher = true, Theme = "@style/MyTheme", ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize)]
-    public class MainActivity : AppCompatActivity
+    [Activity(Label = "@string/ApplicationName", MainLauncher = true, ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize)]
+    public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
-
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
 
             var recyclerView = FindViewById<RecyclerView>(Resource.Id.RecyclerView);
             recyclerView.SetLayoutManager(new LinearLayoutManager(BaseContext));

@@ -1,17 +1,15 @@
 ﻿using Android.App;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using C1.Android.Chart;
 using System;
 using System.Collections.Generic;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexChart101
 {
     [Activity(Label = "HistogramActivity")]
-    public class HistogramActivity : AppCompatActivity
+    public class HistogramActivity : Activity
     {
         private FlexChart mFlexChart;
         private EditText textBox;
@@ -21,11 +19,9 @@ namespace FlexChart101
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_histogram);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.histogram);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.histogram);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initializing widgets
             mFlexChart = (FlexChart)FindViewById(Resource.Id.flexchart);

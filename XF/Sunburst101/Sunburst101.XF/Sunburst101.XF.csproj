@@ -33,14 +33,14 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xamarin.Forms.Chart">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="SkiaSharp" Version="1.59.2" />
     <PackageReference Include="SkiaSharp.Views.Forms" Version="1.59.2" />
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2545" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Resources\AppResources.Designer.cs">

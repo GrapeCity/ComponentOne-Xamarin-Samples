@@ -3,30 +3,26 @@ using Android.Content;
 using Android.Content.PM;
 using Android.Net;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
 using C1.Android.Core;
 using C1.Android.Grid;
 using System.Threading.Tasks;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexGrid101
 {
     [Activity(Label = "@string/OnDemandTitle", ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize)]
-    public class OnDemandActivity : AppCompatActivity
+    public class OnDemandActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.OnDemand);
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.OnDemandTitle);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.OnDemandTitle);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             Grid = FindViewById<FlexGrid>(Resource.Id.Grid);
             Search = FindViewById<EditText>(Resource.Id.Search);

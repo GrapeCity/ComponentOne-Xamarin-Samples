@@ -1,5 +1,4 @@
 ﻿using System;
-using Android.Support.V7.Widget;
 using Android.Views;
 using C1.DataCollection;
 using Android.Widget;
@@ -7,6 +6,7 @@ using System.Threading.Tasks;
 using Android.Graphics;
 using System.Threading;
 using C1.Android.DataCollection;
+using AndroidX.RecyclerView.Widget;
 
 namespace C1Input101
 {

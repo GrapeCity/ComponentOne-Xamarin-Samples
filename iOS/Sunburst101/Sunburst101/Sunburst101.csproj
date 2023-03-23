@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>Sunburst101</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>FlexChart101</AssemblyName>
+    <AssemblyName>Sunburst101</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -98,13 +98,13 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="C1.DataCollection">
-      <Version>1.0.20213.60</Version>
+      <Version>1.0.20223.122</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Chart">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Core">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -255,6 +255,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <EmbeddedResource Include="FlexChart101.gclicx" />
+    <EmbeddedResource Include="Sunburst101.gclicx" />
   </ItemGroup>
 </Project>

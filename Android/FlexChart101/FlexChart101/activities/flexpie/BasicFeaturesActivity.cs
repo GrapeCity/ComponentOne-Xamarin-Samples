@@ -1,20 +1,14 @@
-using System;
 using Android.App;
-using Android.Content;
-using Android.Runtime;
+using Android.OS;
 using Android.Views;
 using Android.Widget;
-using Android.OS;
-using System.Collections.Generic;
 using C1.Android.Chart;
-using Android.Support.V7.App;
-using Android.Support.V7.Widget;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
+using System.Collections.Generic;
 
 namespace FlexChart101.Pie
 {
     [Activity(Label = "@string/basic_features", MainLauncher = false, Icon = "@drawable/pie_doughnut")]
-    public class BasicFeaturesActivity : AppCompatActivity
+    public class BasicFeaturesActivity : Activity
     {
         private FlexPie mflexPie;
         private float mInnerRadius = 0.3f;
@@ -30,11 +24,9 @@ namespace FlexChart101.Pie
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.flexpie_activity_basic_features);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.basic_features);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.basic_features);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initializing widgets
             mflexPie = (FlexPie)FindViewById(Resource.Id.donutPie);
@@ -46,12 +38,14 @@ namespace FlexChart101.Pie
             mButtonPlus = (Button)FindViewById(Resource.Id.buttonPlus);
 
             // creating a list of fruit objects of type BindObject
-            IList<Object> mFlexdonutFruits = new List<Object>();
-            mFlexdonutFruits.Add(new BindObject("Oranges", 11));
-            mFlexdonutFruits.Add(new BindObject("Apples", 94));
-            mFlexdonutFruits.Add(new BindObject("Pears", 93));
-            mFlexdonutFruits.Add(new BindObject("Bananas", 2));
-            mFlexdonutFruits.Add(new BindObject("Pineapples", 53));
+            var mFlexdonutFruits = new List<object>
+            {
+                new BindObject("Oranges", 11),
+                new BindObject("Apples", 94),
+                new BindObject("Pears", 93),
+                new BindObject("Bananas", 2),
+                new BindObject("Pineapples", 53)
+            };
 
             // set the binding of FlexPie to variables of BindObject
             mflexPie.BindingName = "Name";

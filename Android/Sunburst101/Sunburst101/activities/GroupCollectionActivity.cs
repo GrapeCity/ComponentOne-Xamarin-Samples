@@ -1,17 +1,14 @@
 using Android.App;
 using Android.Widget;
 using Android.OS;
-using Android.Support.V7.App;
 using C1.Android.Chart;
 using C1.DataCollection;
-using Android.Support.V7.Widget;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Views;
 
 namespace Sunburst101
 {
     [Activity(Label = "@string/group_collection", Icon = "@drawable/GroupCollection")]
-    public class GroupCollectionActivity : AppCompatActivity
+    public class GroupCollectionActivity : Activity
     {
         private C1DataCollection<Item> cv;
         private C1Sunburst sunburst;
@@ -19,11 +16,9 @@ namespace Sunburst101
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_getting_started);
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.group_collection);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.group_collection);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             sunburst = (C1Sunburst)FindViewById(Resource.Id.sunburst);
 

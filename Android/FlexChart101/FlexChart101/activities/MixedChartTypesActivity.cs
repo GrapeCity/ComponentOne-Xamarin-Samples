@@ -1,15 +1,13 @@
 using Android.App;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using C1.Android.Chart;
 using FlexChart101.DataModel;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexChart101
 {
     [Activity(Label = "@string/mixedChartTypes")]
-    public class MixedChartTypesActivity : AppCompatActivity
+    public class MixedChartTypesActivity : Activity
     {
         private FlexChart mChart;
 
@@ -18,11 +16,9 @@ namespace FlexChart101
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_mixed_chart_types);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.mixedChartTypes);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.mixedChartTypes);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initializing widgets
             mChart = (FlexChart)FindViewById(Resource.Id.flexchart);

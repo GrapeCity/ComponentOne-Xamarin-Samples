@@ -1,26 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Support.V7.App;
-using Android.Runtime;
+using Android.Text;
 using Android.Views;
 using Android.Widget;
-using C1.Android.Viewer;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
-using ImeOptions = Android.Views.InputMethods.ImeAction;
-using Android.Text;
 using C1.Android.Core;
+using C1.Android.Viewer;
+using System;
+using System.IO;
+using ImeOptions = Android.Views.InputMethods.ImeAction;
 
 namespace FlexViewer101
 {
     [Activity(Label = "CustomizeToolbarActivity")]
-    public class CustomizeToolbarActivity : AppCompatActivity
+    public class CustomizeToolbarActivity : Activity
     {
         static readonly int READ_REQUEST_CODE = 1337;
         MemoryStream memoryStream;
@@ -33,12 +26,10 @@ namespace FlexViewer101
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.CustomizeToolbar);
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             stackLayout = FindViewById<LinearLayout>(Resource.Id.searchLayout);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.CustomizeToolbarTitle);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.CustomizeToolbarTitle);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
             // Create your application here
 
             var nextIcon = C1IconTemplate.ChevronRight.CreateIcon();

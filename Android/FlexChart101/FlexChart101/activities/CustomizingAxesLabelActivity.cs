@@ -1,18 +1,15 @@
-﻿
-using Android.App;
+﻿using Android.App;
 using Android.Graphics;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using C1.Android.Chart;
 using FlexChart101.DataModel;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexChart101
 {
     [Activity(Label = "CustomizingAxesLabelActivity")]
-    public class CustomizingAxesLabelActivity : AppCompatActivity
+    public class CustomizingAxesLabelActivity : Activity
     {
         private FlexChart mChart;
 
@@ -21,11 +18,9 @@ namespace FlexChart101
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_customizing_axes);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.customizingAxes);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.customizingAxes);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // Create your application here
             mChart = this.FindViewById<FlexChart>(Resource.Id.flexchart);

@@ -1,16 +1,14 @@
 using Android.App;
 using Android.Graphics;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using C1.Android.Gauge;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace C1Gauge101
 {
     [Activity(Label = "@string/using_ranges", MainLauncher = false, Icon = "@drawable/gauge_ranges")]
-    public class UsingRangesActivity : AppCompatActivity
+    public class UsingRangesActivity : Activity
     {
         private C1LinearGauge mLinearGauge;
         private Switch mSwitchRange;
@@ -26,11 +24,9 @@ namespace C1Gauge101
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_using_ranges);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.using_ranges);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.using_ranges);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initializing widgets
             mSwitchRange = (Switch)FindViewById(Resource.Id.switchRange);

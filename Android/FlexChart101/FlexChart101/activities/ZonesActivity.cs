@@ -1,19 +1,17 @@
 using Android.App;
 using Android.Graphics;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using C1.Android.Chart;
 using C1.Android.Core;
 using FlexChart101.DataModel;
 using Java.Lang;
 using System.Collections.Generic;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexChart101
 {
     [Activity(Label = "@string/zones")]
-    public class ZonesActivity : AppCompatActivity
+    public class ZonesActivity : Activity
     {
         private FlexChart mChart;
 
@@ -22,11 +20,9 @@ namespace FlexChart101
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_zones);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.zones);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.zones);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initializing widget
             mChart = this.FindViewById<FlexChart>(Resource.Id.zonesFlexchart);

@@ -3,7 +3,6 @@ using Android.Content;
 using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
-using Android.Support.V7.App;
 using Android.Views;
 using C1.Android.Grid;
 using System;
@@ -13,12 +12,11 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexGrid101
 {
     [Activity(Label = "@string/ColumnLayoutTitle", ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize)]
-    public class ColumnLayoutActivity : AppCompatActivity
+    public class ColumnLayoutActivity : Activity
     {
         private string FILENAME = "ColumnLayout.json";
         private int EditFormRequest;
@@ -28,11 +26,9 @@ namespace FlexGrid101
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.GettingStarted);
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.ColumnLayoutTitle);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.ColumnLayoutTitle);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             Grid = FindViewById<FlexGrid>(Resource.Id.Grid);
             InitializeColumnLayout();

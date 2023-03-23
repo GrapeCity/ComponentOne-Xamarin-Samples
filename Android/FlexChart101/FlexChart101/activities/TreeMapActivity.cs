@@ -1,15 +1,13 @@
 using Android.App;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using C1.Android.Chart;
 using FlexChart101.DataModel;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexChart101
 {
     [Activity(Label = "@string/gettingStarted")]
-    public class TreeMapActivity : AppCompatActivity
+    public class TreeMapActivity : Activity
     {
         private C1TreeMap treeMap;
 
@@ -18,11 +16,9 @@ namespace FlexChart101
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_tree_map);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.treeMap);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.treeMap);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             treeMap = this.FindViewById<C1TreeMap>(Resource.Id.treeMap);
             treeMap.ChartType = C1.Android.Chart.TreeMapType.Squarified;

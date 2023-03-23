@@ -1,18 +1,16 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 //using Android.Widget;
 using C1.Android.Grid;
 using System.IO;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexGrid101
 {
     [Activity(Label = "@string/ExportTitle", ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize)]
-    public class ExportActivity : AppCompatActivity
+    public class ExportActivity : Activity
     {
         private string FILENAME = "ExportedGrid";
         FlexGrid grid;
@@ -20,11 +18,9 @@ namespace FlexGrid101
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.GettingStarted);
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.ExportTitle);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.ExportTitle);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             grid = FindViewById<FlexGrid>(Resource.Id.Grid);
             grid.ItemsSource = Customer.GetCustomerList(100);
@@ -42,7 +38,7 @@ namespace FlexGrid101
         {
             if (item.ItemId == 0)
             {
-                Save();
+                Save(item.ActionView);
             }
             else if (item.ItemId == global::Android.Resource.Id.Home)
             {
@@ -51,10 +47,9 @@ namespace FlexGrid101
             }
             return base.OnOptionsItemSelected(item);
         }
-        public void Save()
+        public void Save(View view)
         {
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            PopupMenu menu = new PopupMenu(this, toolbar);
+            PopupMenu menu = new PopupMenu(this, view);
             menu.MenuItemClick += (s1, arg1) => {
                 string type = arg1.Item.TitleFormatted.ToString();
                 string PathAndName = Path.Combine(Environment.ExternalStorageDirectory.ToString(), FILENAME) + "." + type;

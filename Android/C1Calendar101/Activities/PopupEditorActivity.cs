@@ -4,19 +4,17 @@ using Android.Content.PM;
 using Android.Content.Res;
 using Android.Graphics;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using C1.Android.Calendar;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace C1Calendar101
 {
     [Activity(Label = "@string/popup_editor", ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize)]
-    public class PopupEditorActivity : AppCompatActivity
+    public class PopupEditorActivity : Activity
     {
 
         private TextView _message;
@@ -27,11 +25,9 @@ namespace C1Calendar101
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.PopupEditor);
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.popup_editor);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.popup_editor);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             _message = FindViewById<TextView>(Resource.Id.Message);
             _pickDateButton = FindViewById<Button>(Resource.Id.PickDateButton);

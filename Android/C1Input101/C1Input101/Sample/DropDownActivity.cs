@@ -1,15 +1,13 @@
 ﻿using Android.App;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using C1.Android.Calendar;
 using C1.Android.Input;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace C1Input101
 {
     [Activity(Label = "@string/dropdown")]
-    public class DropDownActivity : AppCompatActivity
+    public class DropDownActivity : Activity
     {
         C1DropDown dropdown;
         C1MaskedTextView header;
@@ -19,11 +17,9 @@ namespace C1Input101
             base.OnCreate(savedInstanceState);
             this.SetContentView(Resource.Layout.activity_dropdown);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.dropdown);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.dropdown);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             dropdown = (C1DropDown)this.FindViewById(Resource.Id.dropdown);
             header = new C1MaskedTextView(this);

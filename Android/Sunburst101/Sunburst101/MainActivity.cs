@@ -1,14 +1,12 @@
 ﻿using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Widget;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace Sunburst101
 {
     [Activity(Label = "Sunburst101", MainLauncher = true)]
-    public class MainActivity : AppCompatActivity
+    public class MainActivity : Activity
     {
         ListView mSampleList;
         protected override void OnCreate(Bundle bundle)
@@ -19,12 +17,10 @@ namespace Sunburst101
 
             this.SetContentView(Resource.Layout.activity_main);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.appName);
+            ActionBar.Title = GetString(Resource.String.appName);
 
             mSampleList = (ListView)FindViewById(Resource.Id.listView1);
-            SampleListAdapter adapter = new SampleListAdapter(this);
+            var adapter = new SampleListAdapter(this);
             mSampleList.Adapter = adapter;
             mSampleList.ItemClick += ItemClick;
         }

@@ -5,15 +5,12 @@ using Android.OS;
 using System.Collections.Generic;
 using Android.Graphics;
 using C1.Android.Chart;
-using Android.Support.V7.App;
-using Android.Support.V7.Widget;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Views;
 
 namespace FlexChart101.Pie
 {
     [Activity(Label = "@string/data_labels", MainLauncher = false, Icon = "@drawable/pie_selection")]
-    public class DataLabelsActivity : AppCompatActivity
+    public class DataLabelsActivity : Activity
     {
         private FlexPie mFlexPie;
         private Spinner mDataLabelSpinner;
@@ -24,11 +21,9 @@ namespace FlexChart101.Pie
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.flexpie_activity_data_labels);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.dataLabels);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.dataLabels);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initializing widgets
             mFlexPie = (FlexPie)FindViewById(Resource.Id.flexPie);

@@ -1,18 +1,16 @@
 using Android.App;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using C1.Android.Chart;
 using FlexChart101.DataModel;
 using System;
 using System.Collections.Generic;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexChart101
 {
     [Activity(Label = "@string/financialChart")]
-    public class FinancialChartTypesActivity : AppCompatActivity
+    public class FinancialChartTypesActivity : Activity
     {
 
         private Spinner mFinancialTypeSpinner;
@@ -27,11 +25,9 @@ namespace FlexChart101
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_financial_chart);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.financialChart);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.financialChart);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initializing widgets
             mChart = (FlexChart)FindViewById(Resource.Id.flexchart);

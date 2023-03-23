@@ -1,17 +1,15 @@
 ﻿using Android.App;
 using Android.Graphics;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using C1.Android.Chart;
 using C1.Android.Chart.Interaction;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexChart101
 {
     [Activity(Label = "CustomPlotElementsActivity")]
-    public class CustomPlotElementsScrollingActivity : AppCompatActivity
+    public class CustomPlotElementsScrollingActivity : Activity
     {
         private FlexChart mChart;
         int[] imageResources = { Resource.Drawable.logo_apple, Resource.Drawable.logo_google, Resource.Drawable.logo_microsoft };
@@ -21,11 +19,9 @@ namespace FlexChart101
             // Create your application here
             SetContentView(Resource.Layout.activity_custom_plot_elements);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.customPlotElementsScrolling);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.customPlotElementsScrolling);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initializing widget
             mChart = this.FindViewById<FlexChart>(Resource.Id.flexchart);

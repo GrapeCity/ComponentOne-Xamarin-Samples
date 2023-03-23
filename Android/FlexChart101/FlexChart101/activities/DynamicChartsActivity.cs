@@ -1,6 +1,5 @@
 using Android.App;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Text.Format;
 using Android.Views;
 using C1.Android.Chart;
@@ -9,12 +8,11 @@ using Java.Util;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexChart101
 {
     [Activity(Label = "@string/dynamicCharts")]
-    public class DynamicChartsActivity : AppCompatActivity
+    public class DynamicChartsActivity : Activity
     {
         static FlexChart mChart;
         static ObservableCollection<object> mList = new ObservableCollection<object>();
@@ -26,11 +24,9 @@ namespace FlexChart101
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_dynamic_charts);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.dynamicCharts);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.dynamicCharts);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             mHandler = new Handler();
 

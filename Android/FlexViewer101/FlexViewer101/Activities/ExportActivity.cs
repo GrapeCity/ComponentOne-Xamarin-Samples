@@ -1,23 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
+﻿using Android.App;
 using Android.OS;
-using Android.Runtime;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using C1.Android.Viewer;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
+using System.IO;
 
 namespace FlexViewer101
 {
     [Activity(Label = "ExportActivity")]
-    public class ExportActivity : AppCompatActivity
+    public class ExportActivity : Activity
     {
         MemoryStream memoryStream;
         FlexViewer flexViewer;
@@ -26,11 +17,9 @@ namespace FlexViewer101
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.PdfBrowser);
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.ExportTitle);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.ExportTitle);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
             // Create your application here
 
             flexViewer = FindViewById<FlexViewer>(Resource.Id.FlexViewer);
@@ -56,7 +45,7 @@ namespace FlexViewer101
         {
             if (item.ItemId == 0)
             {
-                Save();
+                Save(item.ActionView);
             }
             else if (item.ItemId == global::Android.Resource.Id.Home)
             {
@@ -65,10 +54,9 @@ namespace FlexViewer101
             }
             return base.OnOptionsItemSelected(item);
         }
-        public void Save()
+        public void Save(View view)
         {
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            PopupMenu menu = new PopupMenu(this, toolbar);
+            var menu = new PopupMenu(this, view);
             menu.MenuItemClick += (s1, arg1) =>
             {
                 string type = arg1.Item.TitleFormatted.ToString();

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -13,7 +13,7 @@
     <AndroidApplication>true</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <TargetFrameworkVersion>v11.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v12.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -45,6 +45,22 @@
     <EnableLLVM>true</EnableLLVM>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="C1.Android.Core">
+      <Version>5.0.20231.524</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Android.Gauge">
+      <Version>5.0.20231.524</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Android.Grid">
+      <Version>5.0.20231.524</Version>
+    </PackageReference>
+    <PackageReference Include="C1.Android.Input">
+      <Version>5.0.20231.524</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.ConstraintLayout" Version="2.1.4.2" />
+    <PackageReference Include="Xamarin.AndroidX.RecyclerView" Version="1.2.1.8" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
@@ -54,25 +70,6 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="C1.Android.Core">
-      <Version>4.8.20213.508</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Android.Gauge">
-      <Version>4.8.20213.508</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Android.Grid">
-      <Version>4.8.20213.508</Version>
-    </PackageReference>
-    <PackageReference Include="C1.Android.Input">
-      <Version>4.8.20213.508</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.Constraint.Layout">
-      <Version>1.1.2</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView" Version="28.0.0.3" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\CheckListActivity.cs" />
@@ -141,9 +138,6 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\NewRow.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\layout\Toolbar.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -264,9 +258,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values-ja\Strings.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\values\styles.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\colors.xml" />

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -188,43 +188,43 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.DataCollection">
-      <Version>1.0.20213.60</Version>
+      <Version>1.0.20223.122</Version>
     </PackageReference>
     <PackageReference Include="C1.UWP.DataCollection">
-      <Version>1.0.20213.60</Version>
+      <Version>1.0.20223.122</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Chart">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Chart">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Gauge">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Gauge">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Grid">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Grid">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Input">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Input">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.10" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2545" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.14" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyBI.XF\MyBI.XF.csproj">

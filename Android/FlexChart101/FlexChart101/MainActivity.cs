@@ -1,14 +1,12 @@
 ﻿using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Widget;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexChart101
 {
     [Activity(Label = "FlexChart101", MainLauncher = true)]
-    public class MainActivity : AppCompatActivity
+    public class MainActivity : Activity
     {
         ListView mSampleList;
         protected override void OnCreate(Bundle bundle)
@@ -19,9 +17,7 @@ namespace FlexChart101
 
             this.SetContentView(Resource.Layout.activity_main);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.appName);
+            ActionBar.Title = GetString(Resource.String.appName);
 
             mSampleList = (ListView)FindViewById(Resource.Id.listView1);
             SampleListAdapter adapter = new SampleListAdapter(this);

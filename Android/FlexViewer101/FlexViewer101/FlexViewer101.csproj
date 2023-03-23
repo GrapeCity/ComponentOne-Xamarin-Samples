@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -13,7 +13,7 @@
     <AndroidApplication>true</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <TargetFrameworkVersion>v11.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v12.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -57,10 +57,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Android.Core">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="C1.Android.Viewer">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="GrapeCity.Documents.Pdf">
       <Version>3.2.0.556</Version>
@@ -71,11 +71,8 @@
     <PackageReference Include="System.Memory">
       <Version>4.5.3</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.Constraint.Layout">
-      <Version>1.1.2</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView" Version="28.0.0.3" />
+    <PackageReference Include="Xamarin.AndroidX.ConstraintLayout" Version="2.1.4.2" />
+    <PackageReference Include="Xamarin.AndroidX.RecyclerView" Version="1.2.1.8" />
     <PackageReference Include="Xamarin.Plugin.FilePicker">
       <Version>2.1.34</Version>
     </PackageReference>
@@ -94,9 +91,6 @@
   <ItemGroup>
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\layout\GettingStarted.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\layout\Toolbar.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -176,9 +170,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values-ja\Strings.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\values\styles.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\colors.xml" />

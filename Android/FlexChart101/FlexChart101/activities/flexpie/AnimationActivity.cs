@@ -5,15 +5,13 @@ using Android.Widget;
 using Android.OS;
 using System.Collections.Generic;
 using C1.Android.Chart;
-using Android.Support.V7.App;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 using C1.Android.Core;
 using C1.DataCollection;
 
 namespace FlexChart101.Pie
 {
     [Activity(Label = "@string/animationOptions", MainLauncher = false, Icon = "@drawable/pie_selection")]
-    public class AnimationActivity : AppCompatActivity
+    public class AnimationActivity : Activity
     {
         private FlexPie mFlexPie;
         private TextView mOffset;
@@ -37,11 +35,9 @@ namespace FlexChart101.Pie
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.flexpie_activity_animation);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.animationOptions);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.animationOptions);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initializing widgets
             mFlexPie = (FlexPie)FindViewById(Resource.Id.flexPie);

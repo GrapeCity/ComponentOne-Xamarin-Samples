@@ -4,19 +4,16 @@ using Android.Content;
 using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
-using C1.Android.Core;
 using C1.Android.Gauge;
 using System;
 using System.IO;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace C1Gauge101
 {
     [Activity(Label = "@string/snapshot", Icon = "@drawable/gauge_basic")]
-    public class SnapshotActivity : AppCompatActivity
+    public class SnapshotActivity : Activity
     {
         private C1RadialGauge mRadialGauge;
         private const int REQUEST_CODE_WRITE_EXTERNAL_STORAGE = 1;
@@ -25,11 +22,9 @@ namespace C1Gauge101
         {
             base.OnCreate(savedInstanceState);
             this.SetContentView(Resource.Layout.activity_snapshot);
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.snapshot);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.snapshot);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             mRadialGauge = this.FindViewById<C1RadialGauge>(Resource.Id.radialGauge1);
             mRadialGauge.Enabled = false;
@@ -90,7 +85,7 @@ namespace C1Gauge101
         {
             String APP_PATH_SD_CARD = "/xuni/samples/gauge/";
             mRadialGauge.IsAnimated = false;
-            byte[] image = await mRadialGauge.GetImage();
+            byte[] image = await C1.Android.Core.ViewEx.GetImage(mRadialGauge);
 
             String fullPath = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath + APP_PATH_SD_CARD;
             try

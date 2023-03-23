@@ -2,22 +2,18 @@
 using Android.Widget;
 using Android.OS;
 using Android.Content;
-using Android.Support.V7.App;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace C1Input101
 {
     [Activity(Label = "C1Input101", MainLauncher = true, Icon = "@mipmap/icon")]
-    public class MainActivity : AppCompatActivity
+    public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             this.SetContentView(Resource.Layout.Main);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.ApplicationName);
+            ActionBar.Title = GetString(Resource.String.ApplicationName);
 
             var sampleList = (ListView)FindViewById(Resource.Id.listView1);
             SampleListAdapter adapter = new SampleListAdapter(this);

@@ -8,9 +8,6 @@ using C1.Android.Chart;
 using C1.Android.Core;
 using Sunburst101.Periodic;
 using Android.Graphics;
-using Android.Support.V7.App;
-using Android.Support.V7.Widget;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 using C1.Android.Chart.Interaction;
 using Android.Content.Res;
 using Android.Util;
@@ -18,7 +15,7 @@ using Android.Util;
 namespace Sunburst101
 {
     [Activity(Label = "@string/periodictable", MainLauncher = false, Icon = "@drawable/Selection")]
-    public class PeriodicTableActivity : AppCompatActivity
+    public class PeriodicTableActivity : Activity
     {
         private C1Sunburst sunburst;
         double _x, _y, _width, _height = 0;
@@ -29,11 +26,9 @@ namespace Sunburst101
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_periodictable);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.periodictable);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.periodictable);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initializing widgets
             sunburst = (C1Sunburst)FindViewById(Resource.Id.sunburst);

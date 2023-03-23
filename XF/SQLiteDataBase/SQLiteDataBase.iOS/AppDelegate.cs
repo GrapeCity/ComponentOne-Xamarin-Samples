@@ -23,7 +23,7 @@ namespace SQLiteDataBase.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            SQLitePCL.raw.SetProvider(new SQLitePCL.SQLite3Provider_sqlite3());
+            SQLitePCL.raw.SetProvider(new SQLitePCL.SQLite3Provider_internal());
             //var color = C1.iOS.Core.ColorEx.ThemeBackgroundColor;
             FlexGridRenderer.Init();
             global::Xamarin.Forms.Forms.Init();

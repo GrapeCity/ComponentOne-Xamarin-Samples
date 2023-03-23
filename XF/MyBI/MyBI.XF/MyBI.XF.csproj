@@ -33,23 +33,23 @@
     <EmbeddedResource Include="Icons\white_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="C1.DataCollection" Version="1.0.20213.60" />
+    <PackageReference Include="C1.DataCollection" Version="1.0.20223.122" />
     <PackageReference Include="C1.Xamarin.Forms.Chart">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Gauge">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Grid">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Input">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2545" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Model\MasterMenuItem.cs">

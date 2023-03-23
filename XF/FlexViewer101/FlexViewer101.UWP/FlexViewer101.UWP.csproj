@@ -179,16 +179,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Viewer">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Viewer">
-      <Version>4.8.20213.508</Version>
+      <Version>5.0.20231.524</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.ApplicationInsights">
       <Version>2.10.0</Version>
@@ -199,8 +199,8 @@
     <PackageReference Include="Microsoft.ApplicationInsights.WindowsApps">
       <Version>1.1.1</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.10" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2545" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.14" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FlexViewer101.XF\FlexViewer101.XF.csproj">

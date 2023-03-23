@@ -1,16 +1,14 @@
 using Android.App;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using C1.Android.Gauge;
 using System;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace C1Gauge101
 {
     [Activity(Label = "@string/automatic_scaling", MainLauncher = false, Icon = "@drawable/gauge_scaling")]
-    public class AutomaticScalingActivity : AppCompatActivity
+    public class AutomaticScalingActivity : Activity
     {
         private C1RadialGauge mRadialGauge;
         private TextView mStartText;
@@ -27,11 +25,9 @@ namespace C1Gauge101
 
             SetContentView(Resource.Layout.activity_automatic_scaling);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.automatic_scaling);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.automatic_scaling);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initialize required widgets
             mStartText = (TextView)FindViewById(Resource.Id.startAngleText);

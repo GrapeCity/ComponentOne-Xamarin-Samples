@@ -1,16 +1,14 @@
 ﻿using Android.App;
 using Android.OS;
-using Android.Support.V7.App;
-using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
+using AndroidX.RecyclerView.Widget;
 using System;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace C1Calendar101
 {
-    [Activity(Label = "C1Calendar101", MainLauncher = true, Theme = "@style/MyTheme")]
-    public class MainActivity : AppCompatActivity
+    [Activity(Label = "C1Calendar101", MainLauncher = true)]
+    public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
         {
@@ -18,8 +16,6 @@ namespace C1Calendar101
             base.OnCreate(bundle);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
 
             var recyclerView = FindViewById<RecyclerView>(Resource.Id.RecyclerView);
             recyclerView.SetLayoutManager(new LinearLayoutManager(BaseContext));

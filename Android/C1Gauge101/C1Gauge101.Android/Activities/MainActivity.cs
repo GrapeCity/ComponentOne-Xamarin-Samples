@@ -1,14 +1,12 @@
 ﻿using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Widget;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace C1Gauge101
 {
     [Activity(Label = "C1Gauge101", MainLauncher = true)]
-    public class MainActivity : AppCompatActivity
+    public class MainActivity : Activity
     {
         int count = 1;
         ListView mSampleList;
@@ -18,9 +16,7 @@ namespace C1Gauge101
             base.OnCreate(bundle);
             this.SetContentView(Resource.Layout.activity_main);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.ApplicationName);
+            ActionBar.Title = GetString(Resource.String.ApplicationName);
 
             mSampleList = (ListView)FindViewById(Resource.Id.listView1);
             SampleListAdapter adapter = new SampleListAdapter(this);

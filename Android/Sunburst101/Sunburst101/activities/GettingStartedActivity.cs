@@ -3,26 +3,21 @@ using Android.Widget;
 using Android.OS;
 
 using C1.Android.Chart;
-using Android.Support.V7.App;
-using Android.Support.V7.Widget;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Views;
 
 namespace Sunburst101
 {
     [Activity(Label = "@string/getting_started", Icon = "@drawable/GettingStarted")]
-    public class GettingStartedActivity : AppCompatActivity
+    public class GettingStartedActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_getting_started);
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.getting_started);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.getting_started);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             C1Sunburst sunburst = (C1Sunburst)FindViewById(Resource.Id.sunburst);
 

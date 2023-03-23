@@ -3,29 +3,25 @@ using Android.Content;
 using Android.Content.PM;
 using Android.Graphics;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Util;
 using Android.Views;
 using C1.Android.Core;
 using C1.Android.Grid;
 using System;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexGrid101
 {
     [Activity(Label = "@string/EditConfirmationTitle", ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize)]
-    public class EditConfirmationActivity : AppCompatActivity
+    public class EditConfirmationActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.GettingStarted);
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.EditConfirmationTitle);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.EditConfirmationTitle);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             var dips_50 = TypedValue.ApplyDimension(ComplexUnitType.Dip, 50, Resources.DisplayMetrics);
 

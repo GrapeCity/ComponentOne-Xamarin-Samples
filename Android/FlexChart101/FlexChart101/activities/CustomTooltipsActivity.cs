@@ -2,7 +2,6 @@
 using Android.Content;
 using Android.Graphics;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using C1.Android.Chart;
@@ -10,12 +9,11 @@ using C1.Android.Core;
 using FlexChart101.DataModel;
 using System;
 using System.Globalization;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexChart101
 {
     [Activity(Label = "CustomTooltipsActivity")]
-    public class CustomTooltipsActivity : AppCompatActivity
+    public class CustomTooltipsActivity : Activity
     {
         private FlexChart mChart;
 
@@ -26,11 +24,9 @@ namespace FlexChart101
             // Create your application here
             SetContentView(Resource.Layout.activity_custom_tooltips);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.customTooltips);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.customTooltips);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initializing widget
             mChart = this.FindViewById<FlexChart>(Resource.Id.flexchart);

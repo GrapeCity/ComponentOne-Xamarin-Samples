@@ -10,20 +10,17 @@ using Android.Content;
 using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
-using Android.Support.V4.Content;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using C1.Android.Core;
 using C1.Android.Viewer;
 using Plugin.FilePicker;
 using Plugin.FilePicker.Abstractions;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexViewer101
 {
     [Activity(Label = "@string/GettingStartedTitle", ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize)]
-    public class CustomizeHamburgerMenuActivity : AppCompatActivity
+    public class CustomizeHamburgerMenuActivity : Activity
     {
         MemoryStream memoryStream;
 
@@ -32,11 +29,9 @@ namespace FlexViewer101
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.GettingStarted);
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.CustomizeHamburgerMenuTitle);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.CustomizeHamburgerMenuTitle);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             var flexViewer = FindViewById<FlexViewer>(Resource.Id.FlexViewer);
 
@@ -161,9 +156,9 @@ namespace FlexViewer101
 
         public void Execute(object parameter)
         {
-            _flexViewer.PageBackgroundColor = new Android.Graphics.Color(ContextCompat.GetColor(_context, Resource.Color.colorWhite));
-            _flexViewer.BackgroundColor = new Android.Graphics.Color(ContextCompat.GetColor(_context, Resource.Color.colorLightSlateGray));
-            _flexViewer.PageBorderColor = new Android.Graphics.Color(ContextCompat.GetColor(_context, Resource.Color.colorBlack));
+            _flexViewer.PageBackgroundColor = new Android.Graphics.Color(_context.GetColor(Resource.Color.colorWhite));
+            _flexViewer.BackgroundColor = new Android.Graphics.Color(_context.GetColor(Resource.Color.colorLightSlateGray));
+            _flexViewer.PageBorderColor = new Android.Graphics.Color(_context.GetColor(Resource.Color.colorBlack));
             _flexViewer.Padding = new C1Thickness(20, 20, 20, 20);
             _flexViewer.PageSpacing = 5;
             _flexViewer.Refresh();

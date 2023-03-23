@@ -1,7 +1,6 @@
 using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Util;
 using Android.Views;
 using C1.Android.Grid;
@@ -9,12 +8,11 @@ using C1.DataCollection;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexGrid101
 {
     [Activity(Label = "@string/GroupingTitle", ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize)]
-    public class GroupingActivity : AppCompatActivity
+    public class GroupingActivity : Activity
     {
         private C1DataCollection<Customer> _dataCollection;
 
@@ -23,11 +21,9 @@ namespace FlexGrid101
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.GettingStarted);
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.GroupingTitle);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.GroupingTitle);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             Grid = FindViewById<FlexGrid>(Resource.Id.Grid);
             Grid.GridLinesVisibility = GridLinesVisibility.Vertical;

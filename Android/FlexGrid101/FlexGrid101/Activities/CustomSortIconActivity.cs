@@ -2,7 +2,6 @@
 using Android.Content.PM;
 using Android.Graphics;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using C1.Android.Core;
@@ -10,12 +9,11 @@ using C1.Android.Grid;
 using C1.DataCollection;
 using System;
 using System.Collections.Generic;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexGrid101
 {
     [Activity(Label = "@string/CustomSortIcon", ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize)]
-    public class CustomSortIconActivity : AppCompatActivity
+    public class CustomSortIconActivity : Activity
     {
         private FlexGrid grid;
         protected override void OnCreate(Bundle savedInstanceState)
@@ -23,11 +21,9 @@ namespace FlexGrid101
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.CustomSortIcon);
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.CustomSortIcon);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.CustomSortIcon);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             var positionModes = FindViewById<Spinner>(Resource.Id.SortIconPosition);
             var iconModes = FindViewById<Spinner>(Resource.Id.SortIconTemplate);

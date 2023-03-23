@@ -7,15 +7,12 @@ using Android.Widget;
 using Android.OS;
 using System.Collections.Generic;
 using C1.Android.Chart;
-using Android.Support.V7.App;
-using Android.Support.V7.Widget;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexChart101.Pie
 {
     [Activity(Label = "@string/theming", MainLauncher = false, Icon = "@drawable/themes")]
 
-    public class ThemingActivity : AppCompatActivity
+    public class ThemingActivity : Activity
     {
         private Spinner mThemeSpinner;
         private FlexPie mFlexPie;
@@ -25,11 +22,9 @@ namespace FlexChart101.Pie
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.flexpie_activity_theming);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.theming);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.theming);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
 
             // initializing widgets

@@ -2,16 +2,13 @@ using Android.App;
 using Android.Widget;
 using Android.OS;
 using C1.Android.Chart;
-using Android.Support.V7.App;
-using Android.Support.V7.Widget;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Views;
 
 namespace Sunburst101
 {
     [Activity(Label = "@string/legend_and_titles", MainLauncher = false, Icon = "@drawable/LegendAndTitles")]
 
-    public class LegendAndTitlesActivity : AppCompatActivity
+    public class LegendAndTitlesActivity : Activity
     {
         private C1Sunburst sunburst;
         private EditText mHeaderValue;
@@ -23,11 +20,9 @@ namespace Sunburst101
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_legend_and_titles);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.legend_and_titles);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.legend_and_titles);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initializing widgets
             sunburst = (C1Sunburst)FindViewById(Resource.Id.sunburst);

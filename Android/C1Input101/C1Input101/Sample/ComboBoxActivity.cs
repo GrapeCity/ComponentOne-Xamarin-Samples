@@ -1,15 +1,13 @@
 ﻿using Android.App;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using C1.Android.Input;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace C1Input101
 {
     [Activity(Label = "@string/combobox")]
-    public class ComboBoxActivity : AppCompatActivity
+    public class ComboBoxActivity : Activity
     {
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -18,11 +16,9 @@ namespace C1Input101
 
             this.SetContentView(Resource.Layout.activity_combobox);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.combobox);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.combobox);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             TextView editableLabel = ((TextView)this.FindViewById(Resource.Id.textView1));
             editableLabel.SetText(Resource.String.editable);

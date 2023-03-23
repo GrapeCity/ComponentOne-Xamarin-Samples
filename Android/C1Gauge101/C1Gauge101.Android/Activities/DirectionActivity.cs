@@ -1,15 +1,13 @@
 using Android.App;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using C1.Android.Gauge;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace C1Gauge101
 {
     [Activity(Label = "@string/direction", MainLauncher = false, Icon = "@drawable/gauge_linear")]
-    public class DirectionActivity : AppCompatActivity
+    public class DirectionActivity : Activity
     {
         private C1BulletGraph mBulletGraph;
         private C1LinearGauge mLinearGauge;
@@ -23,11 +21,9 @@ namespace C1Gauge101
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.activity_direction);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.direction);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.direction);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initializing widgets
             mBulletGraph = (C1BulletGraph)FindViewById(Resource.Id.bulletGraph1);

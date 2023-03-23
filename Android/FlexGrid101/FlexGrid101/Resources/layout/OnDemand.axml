@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-  <include
-    android:id="@+id/toolbar"
-    layout="@layout/toolbar" />
   <EditText
       android:id="@+id/Search"
       android:hint="@string/SearchPlaceholderText" 
@@ -13,7 +10,7 @@
       android:layout_height="wrap_content"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+      app:layout_constraintTop_toTopOf="parent" />
   <c1.android.grid.FlexGrid
       android:id="@+id/Grid"
       android:layout_width="0dp"
@@ -45,4 +42,4 @@
       app:layout_constraintHorizontal_bias="0.5"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"/>
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

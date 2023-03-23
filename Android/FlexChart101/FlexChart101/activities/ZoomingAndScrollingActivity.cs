@@ -1,7 +1,6 @@
 ﻿using Android.App;
 using Android.Graphics;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using C1.Android.Chart;
@@ -9,12 +8,11 @@ using C1.Android.Chart.Interaction;
 using System;
 using System.Collections.Generic;
 using Math = System.Math;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace FlexChart101
 {
     [Activity(Label = "ZoomingAndScrollingActivity")]
-    public class ZoomingAndScrollingActivity : AppCompatActivity
+    public class ZoomingAndScrollingActivity : Activity
     {
 
         private FlexChart mChart;
@@ -24,11 +22,9 @@ namespace FlexChart101
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.activity_zooming_and_scrolling);
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.zoomingAndScrolling);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.zoomingAndScrolling);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initializing widgets
             mChart = (FlexChart)FindViewById(Resource.Id.flexchart);

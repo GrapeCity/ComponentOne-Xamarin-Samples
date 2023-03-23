@@ -1,16 +1,14 @@
 using Android.App;
 using Android.Graphics;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using C1.Android.Gauge;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace C1Gauge101
 {
     [Activity(Label = "@string/displaying_values", MainLauncher = false, Icon = "@drawable/gauge_radial")]
-    public class DisplayingValuesActivity : AppCompatActivity
+    public class DisplayingValuesActivity : Activity
     {
         private C1LinearGauge mLinearGauge;
         private Spinner mShowTextSpinner;
@@ -24,11 +22,9 @@ namespace C1Gauge101
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.activity_displaying_values);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.displaying_values);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.displaying_values);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initializing widgets
             mLinearGauge = (C1LinearGauge)FindViewById(Resource.Id.linearGauge1);

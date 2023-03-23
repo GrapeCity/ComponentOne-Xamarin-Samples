@@ -1,15 +1,13 @@
 using Android.App;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using C1.Android.Gauge;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace C1Gauge101
 {
     [Activity(Label = "@string/bulletgraph", MainLauncher = false, Icon = "@drawable/gauge_bullet")]
-    public class BulletGraphActivity : AppCompatActivity
+    public class BulletGraphActivity : Activity
     {
         private C1BulletGraph mBulletGraph;
         private TextView mBadText;
@@ -25,11 +23,9 @@ namespace C1Gauge101
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.activity_bullet_graph);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = GetString(Resource.String.bulletgraph);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetHomeButtonEnabled(true);
+            ActionBar.Title = GetString(Resource.String.bulletgraph);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
 
             // initializing widgets
             mBulletGraph = (C1BulletGraph)FindViewById(Resource.Id.bulletGraph1);
