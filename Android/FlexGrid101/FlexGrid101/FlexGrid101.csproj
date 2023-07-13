@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -46,16 +46,16 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="C1.Android.Core">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Android.Gauge">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Android.Grid">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Android.Input">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.ConstraintLayout" Version="2.1.4.2" />
     <PackageReference Include="Xamarin.AndroidX.RecyclerView" Version="1.2.1.8" />
@@ -72,6 +72,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\ActivityBase.cs" />
     <Compile Include="Activities\CheckListActivity.cs" />
     <Compile Include="Activities\ColumnDefinitionActivity.cs" />
     <Compile Include="Activities\ColumnLayoutFormActivity.cs" />

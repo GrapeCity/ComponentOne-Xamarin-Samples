@@ -85,55 +85,55 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Android.Chart">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Android.Core">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Android.DataCollection">
       <Version>1.0.20223.122</Version>
     </PackageReference>
     <PackageReference Include="C1.Android.Gauge">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Android.Grid">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Android.Input">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.DataCollection">
       <Version>1.0.20223.122</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Chart">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Chart">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Gauge">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Gauge">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Grid">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Grid">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Input">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Input">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2545" />
     <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.3" />

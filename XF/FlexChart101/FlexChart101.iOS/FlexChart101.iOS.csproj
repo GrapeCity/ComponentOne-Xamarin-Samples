@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>FlexChart101.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>FlexChart101.iOS</AssemblyName>
+    <AssemblyName>FlexChart101iOS</AssemblyName>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <StartupObject>FlexChart101.iOS.Application</StartupObject>
@@ -103,22 +103,22 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.iOS.Chart">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Core">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Chart">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Chart">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2545" />
   </ItemGroup>
@@ -201,6 +201,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <EmbeddedResource Include="FlexChart101.iOS.gclicx" />
+    <EmbeddedResource Include="FlexChart101iOS.gclicx" />
   </ItemGroup>
 </Project>

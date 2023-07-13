@@ -10,7 +10,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>Sunburst101.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Sunburst101.iOS</AssemblyName>
+    <AssemblyName>Sunburst101iOS</AssemblyName>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <StartupObject>Sunburst101.iOS.Application</StartupObject>
@@ -115,22 +115,22 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.iOS.Chart">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Core">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Chart">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Chart">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>5.0.20231.524</Version>
+      <Version>5.0.20232.537</Version>
     </PackageReference>
     <PackageReference Include="SkiaSharp" Version="1.59.2" />
     <PackageReference Include="SkiaSharp.Views.Forms" Version="1.59.2" />
@@ -204,6 +204,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <EmbeddedResource Include="Sunburst101.iOS.gclicx" />
+    <EmbeddedResource Include="Sunburst101iOS.gclicx" />
   </ItemGroup>
 </Project>

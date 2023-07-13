@@ -6,11 +6,12 @@ using Android.Widget;
 //using Android.Widget;
 using C1.Android.Grid;
 using System.IO;
+using System.Linq;
 
 namespace FlexGrid101
 {
     [Activity(Label = "@string/ExportTitle", ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize)]
-    public class ExportActivity : Activity
+    public class ExportActivity : ActivityBase
     {
         private string FILENAME = "ExportedGrid";
         FlexGrid grid;
@@ -38,7 +39,7 @@ namespace FlexGrid101
         {
             if (item.ItemId == 0)
             {
-                Save(item.ActionView);
+                Save(FindViewById(item.ItemId));
             }
             else if (item.ItemId == global::Android.Resource.Id.Home)
             {
@@ -50,7 +51,12 @@ namespace FlexGrid101
         public void Save(View view)
         {
             PopupMenu menu = new PopupMenu(this, view);
-            menu.MenuItemClick += (s1, arg1) => {
+            menu.MenuItemClick += async (s1, arg1) => {
+                if (CheckSelfPermission(Android.Manifest.Permission.WriteExternalStorage) != Permission.Granted)
+                {
+                    if ((await RequestPermissionsAsync(new string[] { Android.Manifest.Permission.WriteExternalStorage })).Any(r => r != Permission.Granted))
+                        return;
+                }
                 string type = arg1.Item.TitleFormatted.ToString();
                 string PathAndName = Path.Combine(Environment.ExternalStorageDirectory.ToString(), FILENAME) + "." + type;
                 switch (type)
