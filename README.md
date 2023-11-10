@@ -2,7 +2,7 @@
 
 Add cross-platform business controls to your iOS, Android, and UWP mobile apps.
 
-This repository contains the samples for [ComponentOne Studio for Xamarin](https://www.grapecity.com/componentone/xamarin-ui-controls). These samples provide complete implementation details for the Xamarin.Forms, Xamarin.iOS and Xamarin.Android features. They are also included with the full download and install from grapecity.com/componentone. 
+This repository contains the samples for [ComponentOne Studio for Xamarin](https://developer.mescius.com/componentone/xamarin-ui-controls). These samples provide complete implementation details for the Xamarin.Forms, Xamarin.iOS and Xamarin.Android features. They are also included with the full download and install from developer.mescius.com/componentone. 
 
 The samples reference, but do not include, the control packages. The control packages can be downloaded from nuget.org.
 
@@ -18,9 +18,9 @@ This will install any needed dependencies, build the project, and run the projec
 
 ## Resources
 
-* Product Details: https://www.grapecity.com/componentone/xamarin-ui-controls
-* Documentation: https://www.grapecity.com/componentone/docs/xamarin
-* Support Forum: https://www.grapecity.com/forums/c1-studio-xamarin
+* Product Details: https://developer.mescius.com/componentone/xamarin-ui-controls
+* Documentation: https://developer.mescius.com/componentone/docs/xamarin
+* Support Forum: https://developer.mescius.com/forums/c1-studio-xamarin
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/dotnet/winforms/blob/master/LICENSE.TXT)
  
