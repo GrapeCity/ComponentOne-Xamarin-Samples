@@ -121,7 +121,7 @@
     <value>정보</value>
   </data>
   <data name="AboutLabelText" xml:space="preserve">
-    <value>C1Weather는 GrapeCity에서 ComponentOne Xamarin Edition을 사용하여 제작하였습니다. C1 Xamarin Edition은 iOS, Android 및 UWP에서 앱을 개발하기 위한 고유한 크로스 플랫폼 모바일 컨트롤 모음입니다.</value>
+    <value>C1Weather는 에서 ComponentOne Xamarin Edition을 사용하여 제작하였습니다. C1 Xamarin Edition은 iOS, Android 및 UWP에서 앱을 개발하기 위한 고유한 크로스 플랫폼 모바일 컨트롤 모음입니다.</value>
   </data>
   <data name="AlertMessage" xml:space="preserve">
     <value>현재 날씨 데이터를 확인할 수 없습니다.</value>

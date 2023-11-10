@@ -115,22 +115,22 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.iOS.Chart">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="C1.iOS.Core">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Chart">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Chart">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="SkiaSharp" Version="1.59.2" />
     <PackageReference Include="SkiaSharp.Views.Forms" Version="1.59.2" />

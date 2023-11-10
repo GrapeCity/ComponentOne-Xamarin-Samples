@@ -28,7 +28,7 @@ namespace Sunburst101
             sunburst.LegendPosition = ChartPositionType.None;
             sunburst.ToolTipContent = "{}{name}\n{y}";
 			headerField.Text = "Product By Value";
-			footerField.Text = "2014 GrapeCity.inc.";
+			footerField.Text = "";
             sunburst.Header = headerField.Text;
 			sunburst.Footer = footerField.Text;
            

@@ -4,7 +4,6 @@ using System.Collections.ObjectModel;
 /**
 * A class that encapsulates and manipulates series data
 * 
-* @author GrapeCity
 */
 namespace FlexChart101.DataModel
 {

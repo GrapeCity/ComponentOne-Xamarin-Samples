@@ -20,7 +20,7 @@ namespace MyBI.Views
             powerByLabel.Text = MyBI.Resources.AppResources.PoweredByText;
             var tapGestureRecognizer = new TapGestureRecognizer();
             tapGestureRecognizer.Tapped += (s, e) => {
-                Device.OpenUri(new Uri("https://www.grapecity.com/en/componentone-xamarin"));
+                Device.OpenUri(new Uri("https://developer.mescius.com/componentone-xamarin"));
             };
             powerByLabel.GestureRecognizers.Add(tapGestureRecognizer);
         }

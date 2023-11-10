@@ -47,7 +47,7 @@
                   SelectionMode="Point"
                   BindingName = "Name" Binding = "Value"
                   Header="Fruit By Value"
-                  Footer="2017 GrapeCity, inc."
+                  Footer=""
                   x:Name="flexPie"
                   VerticalOptions="FillAndExpand">
             <c1:FlexPie.HeaderStyle>

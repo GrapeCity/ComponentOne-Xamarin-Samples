@@ -86,7 +86,7 @@
   <string name="axisYFormat2">$#,###</string>
   <string name="axisXFormat1">MM/dd/yyyy</string>
   <string name="chartHeader">Sample Chart</string>
-  <string name="chartFooter">2014 GrapeCity, Inc.</string>
+  <string name="chartFooter"></string>
   <string name="actionSnapshot">Take Snapshot</string>
   <string name="interactive">Interactive</string>
   <string name="horizontalPosition">Horizontal Position</string>
@@ -227,7 +227,7 @@
   <string name="header">Header</string>
   <string name="footer">Footer</string>
   <string name="header_value">Fruit By Value</string>
-  <string name="footer_value">2014 GrapeCity, inc.</string>
+  <string name="footer_value">.</string>
   <string name="legend_position">Legend Position</string>
   <string name="item_offset">Selected Item Offset</string>
   <string name="position">Position</string>

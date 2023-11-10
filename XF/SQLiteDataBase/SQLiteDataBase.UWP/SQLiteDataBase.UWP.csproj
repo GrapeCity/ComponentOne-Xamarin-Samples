@@ -186,16 +186,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Grid">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Grid">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore">
       <Version>3.1.32</Version>

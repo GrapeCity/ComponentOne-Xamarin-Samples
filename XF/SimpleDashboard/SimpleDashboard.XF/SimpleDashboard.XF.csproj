@@ -17,13 +17,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xamarin.Forms.Chart">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Gauge">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2545" />
   </ItemGroup>

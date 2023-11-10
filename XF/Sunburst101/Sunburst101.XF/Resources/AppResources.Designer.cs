@@ -111,7 +111,7 @@ namespace Sunburst101.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to copyright © GrapeCity, inc..
+        ///   Looks up a localized string similar to copyright © MESCIUS, inc..
         /// </summary>
         public static string FooterContent {
             get {

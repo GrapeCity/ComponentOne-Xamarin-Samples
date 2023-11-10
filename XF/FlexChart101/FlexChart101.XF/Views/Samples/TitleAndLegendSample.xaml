@@ -11,7 +11,7 @@
                     ChartType="Scatter"
                     Header="Sample Chart"
                     HeaderAlignment = "Center"
-                    Footer = "2017 GrapeCity, Inc."
+                    Footer = ""
                     FooterAlignment="Center" 
                     LegendPosition="Bottom"
                     VerticalOptions="FillAndExpand" >

@@ -121,7 +121,7 @@
     <value>About</value>
   </data>
   <data name="AboutLabelText" xml:space="preserve">
-    <value>C1Weather was made by GrapeCity using ComponentOne Xamarin Edition.  C1 Xamarin Edition is a collection of native, cross-platform mobile controls for developing apps on iOS, Android, and UWP.</value>
+    <value>C1Weather was made using ComponentOne Xamarin Edition.  C1 Xamarin Edition is a collection of native, cross-platform mobile controls for developing apps on iOS, Android, and UWP.</value>
   </data>
   <data name="AlertMessage" xml:space="preserve">
     <value>Unable to reterive weather data at this time.</value>

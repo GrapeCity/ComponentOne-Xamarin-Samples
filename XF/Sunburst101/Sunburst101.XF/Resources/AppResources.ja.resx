@@ -150,8 +150,8 @@ The example allows you to see what hanppens when you change these properties. Al
     <comment>Footer</comment>
   </data>
   <data name="FooterContent" xml:space="preserve">
-    <value>copyright © GrapeCity, inc.</value>
-    <comment>copyright © GrapeCity, inc.</comment>
+    <value></value>
+    <comment></comment>
   </data>
   <data name="GettingStartedDescription" xml:space="preserve">
     <value>UWPアプリケーションでSunburstコントロールを開始する手順：

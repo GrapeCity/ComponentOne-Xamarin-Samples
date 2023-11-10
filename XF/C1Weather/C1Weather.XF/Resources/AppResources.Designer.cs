@@ -73,7 +73,7 @@ namespace C1Weather.Resources {
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to C1Weather was made by GrapeCity using ComponentOne Xamarin Edition.  C1 Xamarin Edition is a collection of native, cross-platform mobile controls for developing apps on iOS, Android, and UWP..
+        ///   Looks up a localized string similar to C1Weather was made using ComponentOne Xamarin Edition.  C1 Xamarin Edition is a collection of native, cross-platform mobile controls for developing apps on iOS, Android, and UWP..
         /// </summary>
         internal static string AboutLabelText {
             get {

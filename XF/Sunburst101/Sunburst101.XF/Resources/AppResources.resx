@@ -136,7 +136,7 @@ The example allows you to see what hanppens when you change these properties. Al
     <value>Footer</value>
   </data>
   <data name="FooterContent" xml:space="preserve">
-    <value>copyright © GrapeCity, inc.</value>
+    <value></value>
   </data>
   <data name="GettingStartedDescription" xml:space="preserve">
     <value>Steps for getting started with Sunburst control in UWP applications:

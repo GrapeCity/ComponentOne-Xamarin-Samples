@@ -35,7 +35,7 @@ namespace FlexChart101
             chart.Header = "Sample Chart";
             chart.HeaderAlignment = UITextAlignment.Center;
             chart.HeaderStyle = new ChartStyle { Stroke = new UIColor(0.502f, 0.016f, 0.302f, 1), FontFamily = UIFont.SystemFontOfSize(24, UIFontWeight.Bold)};
-            chart.Footer = "2017 GrapeCity, Inc.";
+            chart.Footer = "";
             chart.FooterAlignment = UITextAlignment.Center;
             chart.FooterStyle = new ChartStyle { Stroke = new UIColor(0.502f, 0.016f, 0.302f, 1), FontFamily = UIFont.SystemFontOfSize(16, UIFontWeight.Bold) };
 

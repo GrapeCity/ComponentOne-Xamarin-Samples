@@ -28,7 +28,7 @@ namespace FlexChart101
 
             // set title/footer
             mChart.Header = "FlexChart Sales";
-            mChart.Footer = "GrapeCity";
+            mChart.Footer = "";
         }
         public override bool OnOptionsItemSelected(IMenuItem item)
         {

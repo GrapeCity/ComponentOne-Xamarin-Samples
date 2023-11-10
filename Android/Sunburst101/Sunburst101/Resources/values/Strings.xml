@@ -24,7 +24,7 @@
   <string name="header">Header</string>
   <string name="footer">Footer</string>
   <string name="header_value">Product By Value</string>
-  <string name="footer_value">2014 GrapeCity, inc.</string>
+  <string name="footer_value"></string>
   <string name="legend_position">Legend Position</string>
   <string name="item_offset">Selected Item Offset</string>
   <string name="position">Position</string>

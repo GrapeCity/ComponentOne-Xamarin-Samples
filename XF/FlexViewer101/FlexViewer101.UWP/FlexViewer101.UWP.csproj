@@ -179,16 +179,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Viewer">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Viewer">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.ApplicationInsights">
       <Version>2.10.0</Version>

@@ -14,7 +14,8 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <PropertyGroup Label="Globals">
-    <Copyright>(c) GrapeCity, Inc.. All rights reserved.</Copyright>
+    <Copyright>
+    </Copyright>
     <NeutralLanguage>en</NeutralLanguage>
     <Product>MyBI</Product>
     <Company>
@@ -35,19 +36,19 @@
   <ItemGroup>
     <PackageReference Include="C1.DataCollection" Version="1.0.20223.122" />
     <PackageReference Include="C1.Xamarin.Forms.Chart">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Core">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Gauge">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Grid">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="C1.Xamarin.Forms.Input">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2545" />
   </ItemGroup>

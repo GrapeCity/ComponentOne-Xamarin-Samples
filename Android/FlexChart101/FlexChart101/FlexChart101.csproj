@@ -56,13 +56,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="C1.Android.Calendar">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="C1.Android.Chart">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="C1.Android.Core">
-      <Version>5.0.20232.537</Version>
+      <Version>5.0.20233.552</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.ConstraintLayout" Version="2.1.4.2" />
     <PackageReference Include="Xamarin.AndroidX.RecyclerView" Version="1.2.1.8" />
