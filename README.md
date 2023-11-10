@@ -8,7 +8,7 @@ The samples reference, but do not include, the control packages. The control pac
 
 ## Building a Sample 
 
-Xamarin samples require Visual Studio 2017, Android 4.2 (API 17), iOS 10 and above. Run these commands from the CLI in the directory of any sample: 
+Xamarin samples require Visual Studio 2019 or higher. Check other requirements here: https://github.com/xamarin/Xamarin.Forms. Run these commands from the CLI in the directory of any sample: 
 
 ```
 dotnet build 
